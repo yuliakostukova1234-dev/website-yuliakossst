@@ -8,7 +8,8 @@
 <meta property="og:title" content="Юля — фитнес-тренер для девушек">
 <meta property="og:description" content="Тренировки, питание и поддержка с индивидуальным подходом. Выбери свой формат и напиши мне.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/og.jpg">
+<meta property="og:image" content="https://yuliakostukova1234-dev.github.io/website-yuliakossst/og.jpg">
+<meta property="og:url" content="https://yuliakostukova1234-dev.github.io/website-yuliakossst/">
 <meta name="theme-color" content="#F3C6D3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237B1A3E'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' fill='%23F3C6D3' text-anchor='middle'%3E%D0%AE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +76,7 @@
   .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
   .head-row .lead{margin-top:0;max-width:440px}
 
-  /* photo slots: if images/*.jpg missing — graceful placeholder */
+  /* photo slots: if *.jpg missing — graceful placeholder */
   .photo{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--pink-2),var(--blue) 120%)}
   .photo img{width:100%;height:100%;object-fit:cover}
   .photo.empty::after{content:attr(data-label);position:absolute;inset:auto 0 0 0;padding:16px;text-align:center;font-weight:700;font-size:14px;color:var(--wine);opacity:.7}
@@ -313,7 +314,7 @@
         </div>
       </div>
       <div class="hero-photo rv">
-        <div class="photo" data-label="Портрет Юли"><img src="images/hero.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo" data-label="Портрет Юли"><img src="hero.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
         <div class="name-badge"><b>Юля</b><small>твой тренер</small></div>
         <div class="float-badge"><b>онлайн</b>тренировки<br>со мной</div>
       </div>
@@ -326,9 +327,9 @@
   <div class="wrap">
     <div class="card about-grid">
       <div class="about-photos rv">
-        <div class="photo p1" data-label="Фото в зале"><img src="images/about-1.jpg" alt="Юля на тренировке" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p2" data-label="Сцена / соревнования"><img src="images/about-2.jpg" alt="Юля на соревнованиях" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p3" data-label="Сцена"><img src="images/about-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo p1" data-label="Фото в зале"><img src="about-1.jpg" alt="Юля на тренировке" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo p2" data-label="Сцена / соревнования"><img src="about-2.jpg" alt="Юля на соревнованиях" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo p3" data-label="Сцена"><img src="about-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
       </div>
       <div class="rv">
         <span class="kicker">Обо мне</span>
@@ -364,10 +365,10 @@
       <p class="lead" style="color:var(--wine-deep)">Чемпионат Санкт-Петербурга по бодибилдингу — 2026. Путь к форме я знаю не по книжкам, а на своём опыте.</p>
     </div>
     <div class="stage">
-      <div class="photo rv" data-label="Фото"><img src="images/stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="images/stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="images/stage-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="images/stage-4.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="stage-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="stage-4.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
     </div>
     <p class="credit">Фото: А. Чепурняк · Академия ФББР</p>
   </div>
