@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Юля — фитнес-тренер для девушек</title>
+<meta name="description" content="Онлайн-тренировки, питание и сопровождение для девушек. Индивидуальный подход, комфорт и поддержка на пути к цели.">
+<meta property="og:title" content="Юля — фитнес-тренер для девушек">
+<meta property="og:description" content="Тренировки, питание и поддержка с индивидуальным подходом. Выбери свой формат и напиши мне.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/og.jpg">
+<meta name="theme-color" content="#F3C6D3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237B1A3E'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' fill='%23F3C6D3' text-anchor='middle'%3E%D0%AE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#F3C6D3;
+    --pink-2:#F8D9E3;
+    --pink-soft:#FCEEF3;
+    --blue:#C6E2F5;
+    --blue-2:#9CCBEB;
+    --wine:#7B1A3E;
+    --wine-deep:#560E29;
+    --ink:#2E1A23;
+    --muted:#7A5A67;
+    --white:#fff;
+    --radius-xl:40px;
+    --radius-l:28px;
+    --radius-m:20px;
+    --shadow:0 18px 40px -18px rgba(123,26,62,.28);
+    --shadow-blue:0 18px 34px -16px rgba(60,130,190,.45);
+    --head:"Unbounded", "Arial Black", sans-serif;
+    --script:"Great Vibes", "Segoe Script", cursive;
+    --body:"Manrope", "Segoe UI", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{font-family:var(--body);color:var(--ink);background:var(--pink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+  /* ---------- header ---------- */
+  .top{position:sticky;top:0;z-index:50;padding:12px 0;background:rgba(243,198,211,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:baseline;gap:10px;color:var(--wine)}
+  .logo b{font-family:var(--script);font-weight:400;font-size:38px;line-height:1}
+  .logo span{font-family:var(--head);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .nav{display:flex;gap:6px;background:rgba(255,255,255,.55);padding:6px;border-radius:999px}
+  .nav a{font-weight:600;font-size:14.5px;color:var(--wine);padding:9px 16px;border-radius:999px;transition:background .2s}
+  .nav a:hover{background:var(--white)}
+  .top .btn{padding:12px 22px;font-size:15px}
+  @media (max-width:960px){.nav{display:none}}
+  @media (max-width:560px){.top .btn{display:none}}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:800;font-size:17px;padding:18px 32px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s, box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-blue{background:linear-gradient(180deg,#D8EDFB 0%,var(--blue-2) 100%);color:var(--wine-deep);box-shadow:var(--shadow-blue), inset 0 2px 0 rgba(255,255,255,.8)}
+  .btn-wine{background:var(--wine);color:var(--white);box-shadow:var(--shadow)}
+  .btn-ghost{background:rgba(255,255,255,.7);color:var(--wine)}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* ---------- common ---------- */
+  section{padding:28px 0}
+  @media (min-width:900px){section{padding:36px 0}}
+  .card{background:var(--white);border-radius:var(--radius-xl);padding:clamp(28px,5vw,64px)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);background:var(--pink-soft);padding:8px 14px;border-radius:999px}
+  .kicker::before{content:"";width:8px;height:8px;border-radius:3px;background:currentColor}
+  h2{font-family:var(--head);font-weight:800;color:var(--wine);font-size:clamp(32px,5.4vw,64px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 0}
+  h2 em{font-family:var(--script);font-style:normal;font-weight:400;font-size:1.15em;letter-spacing:0;display:inline-block;transform:translateY(.06em)}
+  .lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:620px;margin-top:18px}
+  .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+  .head-row .lead{margin-top:0;max-width:440px}
+
+  /* photo slots: if images/*.jpg missing — graceful placeholder */
+  .photo{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--pink-2),var(--blue) 120%)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .photo.empty::after{content:attr(data-label);position:absolute;inset:auto 0 0 0;padding:16px;text-align:center;font-weight:700;font-size:14px;color:var(--wine);opacity:.7}
+  .photo.empty::before{content:"";position:absolute;left:50%;top:46%;width:64px;height:64px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237B1A3E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8h3l2-3h6l2 3h3v11H4z'/%3E%3Ccircle cx='12' cy='13' r='3.5'/%3E%3C/svg%3E") center/30px no-repeat}
+
+  /* ---------- hero ---------- */
+  .hero{padding:16px 0 40px}
+  .hero-card{position:relative;border-radius:var(--radius-xl);background:
+      radial-gradient(60% 70% at 85% 20%, rgba(255,255,255,.75), transparent 60%),
+      radial-gradient(50% 60% at 10% 100%, rgba(198,226,245,.9), transparent 70%),
+      linear-gradient(160deg,#FBE3EB 0%,#F5C9D6 55%,#EFB7C8 100%);
+    padding:clamp(28px,5vw,64px);overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;min-height:640px}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--wine);background:rgba(255,255,255,.6);padding:9px 16px;border-radius:999px;font-size:15px}
+  .dot{width:9px;height:9px;border-radius:50%;background:#3FBF6A;box-shadow:0 0 0 4px rgba(63,191,106,.2)}
+  .hero h1{margin:26px 0 0;line-height:.88}
+  .hero h1 .big{display:block;font-family:var(--head);font-weight:900;font-size:clamp(52px,9.2vw,132px);letter-spacing:-.04em;color:var(--white);text-shadow:0 10px 40px rgba(123,26,62,.18)}
+  .hero h1 .script{display:block;font-family:var(--script);font-weight:400;color:var(--wine);font-size:clamp(56px,8.6vw,120px);line-height:.9;margin-top:-.08em;padding-left:.35em;letter-spacing:0}
+  .hero p.sub{margin-top:26px;font-size:clamp(17px,1.6vw,21px);max-width:520px;color:var(--wine-deep)}
+  .hero p.sub b{font-weight:800}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .chip{background:var(--white);color:var(--wine);font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px;box-shadow:0 8px 20px -14px rgba(123,26,62,.5)}
+  .hero-photo{position:relative;justify-self:center;width:min(100%,470px)}
+  .hero-photo .photo img{object-position:center 18%}
+  .hero-photo .photo{aspect-ratio:2/3;border-radius:220px 220px 36px 36px;box-shadow:0 40px 70px -30px rgba(86,14,41,.45);border:8px solid rgba(255,255,255,.65)}
+  .name-badge{position:absolute;left:-28px;bottom:48px;background:var(--white);border-radius:22px;padding:14px 22px 16px;text-align:center;box-shadow:var(--shadow)}
+  .name-badge b{display:block;font-family:var(--script);font-weight:400;font-size:40px;line-height:1;color:var(--wine)}
+  .name-badge small{font-weight:700;font-size:13px;color:var(--muted)}
+  .float-badge{position:absolute;right:-14px;top:40px;background:var(--wine);color:var(--white);border-radius:18px;padding:12px 16px;font-weight:700;font-size:14px;line-height:1.3;box-shadow:var(--shadow);transform:rotate(4deg)}
+  .float-badge b{font-family:var(--head);font-size:22px;display:block}
+  @media (max-width:900px){
+    .hero-card{grid-template-columns:1fr;min-height:0}
+    .hero-photo{order:-1;width:min(100%,320px)}
+    .hero-cta .btn{flex:1 1 220px}
+    .name-badge{left:-8px}
+    .float-badge{right:-6px}
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about-photos .photo{border-radius:var(--radius-l)}
+  .about-photos .p1{grid-row:span 2;height:100%;min-height:100%}
+  .about-photos .p2,.about-photos .p3{aspect-ratio:1/1.1}
+  .facts{display:grid;gap:14px;margin-top:30px}
+  .fact{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--pink-soft);border-radius:var(--radius-m);padding:18px 20px}
+  .fact .ic{width:56px;height:56px;border-radius:16px;background:var(--white);display:grid;place-items:center;color:var(--wine)}
+  .fact .ic svg{width:28px;height:28px}
+  .fact h3{font-family:var(--head);font-weight:600;font-size:17px;color:var(--wine);line-height:1.25}
+  .fact p{color:var(--muted);font-size:15.5px;margin-top:4px}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+  /* ---------- pains ---------- */
+  .pains{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pain{background:var(--pink-soft);border-radius:var(--radius-l);padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px}
+  .num{width:44px;height:44px;border-radius:14px;background:var(--white);display:grid;place-items:center;font-family:var(--head);font-weight:800;color:var(--wine);box-shadow:0 8px 16px -10px rgba(123,26,62,.5)}
+  .pain h3{font-family:var(--head);font-weight:600;font-size:19px;line-height:1.2;color:var(--wine);margin-top:6px}
+  .pain p{color:var(--muted);font-size:15.5px}
+  .pain-note{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--blue);border-radius:var(--radius-l);padding:22px 28px}
+  .pain-note p{font-weight:700;font-size:18px;color:var(--wine-deep)}
+  @media (max-width:1000px){.pains{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.pains{grid-template-columns:1fr}}
+
+  /* ---------- approach ---------- */
+  .approach{background:var(--wine);color:var(--white);border-radius:var(--radius-xl);padding:clamp(28px,5vw,64px);position:relative;overflow:hidden}
+  .approach::after{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(243,198,211,.35),transparent 65%)}
+  .approach h2{color:var(--white)}
+  .approach h2 em{color:var(--pink)}
+  .approach .lead{color:rgba(255,255,255,.75)}
+  .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;position:relative;z-index:1}
+  .ap{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-l);padding:26px}
+  .ap .ic{width:52px;height:52px;border-radius:16px;background:var(--pink);color:var(--wine);display:grid;place-items:center;margin-bottom:18px}
+  .ap .ic svg{width:26px;height:26px}
+  .ap h3{font-family:var(--head);font-weight:600;font-size:18px;line-height:1.25}
+  .ap p{color:rgba(255,255,255,.75);font-size:15.5px;margin-top:8px}
+  @media (max-width:1000px){.steps4{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.steps4{grid-template-columns:1fr}}
+
+  /* ---------- pricing ---------- */
+  .featured{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;background:linear-gradient(150deg,var(--pink-soft),var(--pink-2));border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px);position:relative;overflow:hidden}
+  .ribbon{display:inline-block;background:var(--wine);color:var(--white);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+  .featured h3{font-family:var(--head);font-weight:800;font-size:clamp(28px,3.6vw,44px);color:var(--wine);line-height:1.05;margin-top:18px}
+  .featured h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.2em}
+  .list{list-style:none;display:grid;gap:10px;margin-top:22px}
+  .list li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:var(--wine-deep)}
+  .list li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--wine) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
+  .price-box{background:var(--white);border-radius:var(--radius-l);padding:32px;text-align:center;box-shadow:var(--shadow)}
+  .price{font-family:var(--head);font-weight:800;color:var(--wine);font-size:clamp(40px,5vw,60px);line-height:1;letter-spacing:-.02em}
+  .price small{font-family:var(--body);font-size:17px;font-weight:700;color:var(--muted);letter-spacing:0}
+  .price-box p{color:var(--muted);margin:10px 0 22px;font-size:15px}
+  .price-box .btn{width:100%}
+
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .plan{border-radius:var(--radius-l);padding:28px;display:flex;flex-direction:column}
+  .plan.pink{background:var(--pink-soft)}
+  .plan.blue{background:#E3F1FA}
+  .plan .tag{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .plan h3{font-family:var(--head);font-weight:600;font-size:22px;color:var(--wine);line-height:1.2;margin-top:8px}
+  .opts{display:grid;gap:10px;margin:20px 0 24px;flex:1;align-content:start}
+  .opt{background:var(--white);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+  .opt span{font-weight:600;font-size:15.5px;line-height:1.35}
+  .opt span small{display:block;font-weight:500;color:var(--muted);font-size:13.5px;margin-top:2px}
+  .opt b{font-family:var(--head);font-weight:800;color:var(--wine);font-size:24px;white-space:nowrap;letter-spacing:-.01em}
+  .opt b i{font-style:normal;font-family:var(--body);font-weight:700;font-size:12px;color:var(--muted)}
+  .plan .btn{width:100%;padding:15px 24px;font-size:16px}
+  @media (max-width:760px){.featured{grid-template-columns:1fr}.plans{grid-template-columns:1fr}}
+  .nutri{margin-top:16px;display:grid;grid-template-columns:1.35fr .65fr;gap:32px;align-items:center;background:linear-gradient(150deg,#E3F1FA,var(--blue));border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px)}
+  .nutri .ribbon{background:var(--white);color:var(--wine)}
+  .nutri h3{font-family:var(--head);font-weight:800;font-size:clamp(26px,3.2vw,40px);color:var(--wine);line-height:1.05;margin-top:18px}
+  .nutri h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.2em}
+  .list.two{grid-template-columns:1fr 1fr;column-gap:24px}
+  .list.two li{font-size:15.5px}
+  @media (max-width:860px){.nutri{grid-template-columns:1fr}.list.two{grid-template-columns:1fr}}
+  .includes{margin-top:16px;background:var(--white);border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px);display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center}
+  .includes h3{font-family:var(--head);font-weight:800;font-size:clamp(24px,2.8vw,34px);color:var(--wine);line-height:1.1}
+  .includes h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.25em}
+  .includes .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .includes .meta span{background:var(--pink-soft);color:var(--wine);font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px}
+  .includes .list{margin-top:0}
+  @media (max-width:860px){.includes{grid-template-columns:1fr}}
+
+  /* ---------- single trainings ---------- */
+  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pack{background:var(--white);border-radius:var(--radius-l);padding:30px;text-align:center;position:relative;border:2px solid transparent}
+  .pack.best{border-color:var(--wine)}
+  .pack .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--wine);color:var(--white);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;white-space:nowrap}
+  .pack .count{font-family:var(--head);font-weight:900;font-size:72px;line-height:1;color:var(--pink);-webkit-text-stroke:2px var(--wine)}
+  .pack .what{font-weight:700;color:var(--wine);margin-top:6px}
+  .pack .price{font-size:40px;margin-top:18px}
+    .pack .per{color:var(--muted);font-size:14.5px;margin-top:6px;min-height:22px}
+  .pack .btn{margin-top:22px;width:100%;padding:15px}
+  @media (max-width:860px){.packs{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
+
+  /* ---------- stage gallery ---------- */
+  .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
+  .stage .photo img{object-position:center 30%}
+  .credit{margin-top:14px;font-size:13px;color:var(--muted)}
+  @media (max-width:860px){.stage{grid-template-columns:1fr 1fr}}
+
+  /* ---------- how ---------- */
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+  .how li{list-style:none;background:var(--pink-soft);border-radius:var(--radius-l);padding:28px;position:relative}
+  .how li::before{counter-increment:s;content:"0" counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--white);-webkit-text-stroke:2px var(--wine);display:block;margin-bottom:16px}
+  .how h3{font-family:var(--head);font-weight:600;font-size:19px;color:var(--wine)}
+  .how p{color:var(--muted);margin-top:8px;font-size:15.5px}
+  @media (max-width:860px){.how{grid-template-columns:1fr}}
+
+  /* ---------- contacts ---------- */
+  .contact{background:
+      radial-gradient(60% 80% at 100% 0%, rgba(255,255,255,.6), transparent 60%),
+      linear-gradient(150deg,var(--blue) 0%, #DCEEFA 60%, var(--pink-2) 130%);
+    border-radius:var(--radius-xl);padding:clamp(28px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .contact h2 em{color:var(--wine)}
+  .contact .lead{color:var(--wine-deep);opacity:.8}
+  .socials{display:grid;grid-template-columns:1fr;gap:14px;max-width:440px;width:100%;justify-self:end}
+  .soc{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:22px;padding:18px 20px;font-weight:800;color:var(--wine);box-shadow:0 14px 30px -20px rgba(60,100,150,.6);transition:transform .2s}
+  .soc:hover{transform:translateY(-3px)}
+  .soc .si{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--white);flex:none}
+  .soc .si svg{width:24px;height:24px}
+  .soc small{display:block;font-weight:600;color:var(--muted);font-size:13px}
+  .tg{background:#2AABEE}.wa{background:#25D366}.ig{background:linear-gradient(45deg,#F9A13A,#E1306C 55%,#8A3AB9)}.vk{background:#0077FF}
+  @media (max-width:860px){.contact{grid-template-columns:1fr}}
+  @media (max-width:860px){.socials{justify-self:stretch;max-width:none}}
+
+  footer{padding:36px 0 120px;color:var(--wine-deep);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer .logo b{font-size:32px}
+  footer .note{opacity:.65;font-size:12.5px;max-width:520px}
+  @media (min-width:761px){footer{padding-bottom:40px}}
+
+  @media (max-width:560px){
+    .card,.approach,.contact{padding:24px 18px;border-radius:30px}
+    .featured,.nutri,.includes{padding:22px 16px;border-radius:26px}
+    .price-box{padding:24px 18px}
+    .price small{display:block;margin-top:6px}
+    .btn{padding:16px 22px;font-size:16px}
+    .plan{padding:20px 16px}
+    .fact{grid-template-columns:44px 1fr;gap:12px;padding:16px}
+    .fact .ic{width:44px;height:44px;border-radius:13px}
+    .fact .ic svg{width:22px;height:22px}
+  }
+  /* mobile sticky CTA */
+  .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
+  .sticky-cta .btn{width:100%;box-shadow:0 16px 30px -10px rgba(86,14,41,.55)}
+  @media (max-width:760px){.sticky-cta{display:block}}
+
+  /* reveal */
+  .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .js .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.btn,.soc{transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- ======= ШАПКА ======= -->
+<header class="top">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Юля — фитнес-тренер"><b>Юля</b><span>фитнес-тренер</span></a>
+    <nav class="nav" aria-label="Меню">
+      <a href="#about">Обо мне</a>
+      <a href="#approach">Подход</a>
+      <a href="#prices">Тарифы</a>
+      <a href="#single">Тренировки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="#contacts" class="btn btn-wine">Записаться</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ======= ПЕРВЫЙ ЭКРАН ======= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="rv">
+        <span class="hero-tag"><span class="dot"></span>Набираю девушек на сопровождение</span>
+        <h1>
+          <span class="big">СИЛЬНОЕ<br>ТЕЛО</span>
+          <span class="script">в твоём ритме</span>
+        </h1>
+        <p class="sub">Тренировки, питание и поддержка — <b>с индивидуальным подходом к каждой</b>. Помогу дойти до твоей цели так, чтобы тебе было комфортно и легко.</p>
+        <div class="hero-cta">
+          <a href="#contacts" class="btn btn-blue">Хочу тренироваться
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#prices" class="btn btn-ghost">Смотреть тарифы</a>
+        </div>
+        <div class="chips">
+          <span class="chip">🏆 Спортсменка в бодибилдинге</span>
+          <span class="chip">💃 Танцор</span>
+          <span class="chip">🩺 ПСПбГМУ им. Павлова</span>
+        </div>
+      </div>
+      <div class="hero-photo rv">
+        <div class="photo" data-label="Портрет Юли"><img src="images/hero.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="name-badge"><b>Юля</b><small>твой тренер</small></div>
+        <div class="float-badge"><b>онлайн</b>тренировки<br>со мной</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ОБО МНЕ ======= -->
+<section id="about">
+  <div class="wrap">
+    <div class="card about-grid">
+      <div class="about-photos rv">
+        <div class="photo p1" data-label="Фото в зале"><img src="images/about-1.jpg" alt="Юля на тренировке" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo p2" data-label="Сцена / соревнования"><img src="images/about-2.jpg" alt="Юля на соревнованиях" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="photo p3" data-label="Сцена"><img src="images/about-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      </div>
+      <div class="rv">
+        <span class="kicker">Обо мне</span>
+        <h2>Привет, я <em>Юля</em></h2>
+        <p class="lead">Я стараюсь помочь каждой девушке выложиться на максимум — чтобы каждая могла дойти до своей цели. А моя задача — сделать этот путь понятным, безопасным и приятным.</p>
+        <div class="facts">
+          <div class="fact">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg></div>
+            <div><h3>Спортсменка в бодибилдинге</h3><p>Выступаю на соревнованиях — Чемпионат Санкт-Петербурга по бодибилдингу 2026. Сама прохожу путь построения тела и знаю, как работают нагрузки, питание и восстановление.</p></div>
+          </div>
+          <div class="fact">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-2M12 10l-4 1-2 3"/></svg></div>
+            <div><h3>Танцор</h3><p>Добавляю в работу пластику и лёгкость — тело становится не только сильным, но и красивым в движении.</p></div>
+          </div>
+          <div class="fact">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 12h2l1-2 1.5 4 1-2H16"/></svg></div>
+            <div><h3>Медицинское образование</h3><p>Оканчиваю ПСПбГМУ им. академика Павлова — поэтому подход к тренировкам и питанию грамотный и бережный к здоровью.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= СЦЕНА ======= -->
+<section id="stage">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div>
+        <span class="kicker" style="background:var(--white)">Мой результат</span>
+        <h2>На <em>сцене</em></h2>
+      </div>
+      <p class="lead" style="color:var(--wine-deep)">Чемпионат Санкт-Петербурга по бодибилдингу — 2026. Путь к форме я знаю не по книжкам, а на своём опыте.</p>
+    </div>
+    <div class="stage">
+      <div class="photo rv" data-label="Фото"><img src="images/stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="images/stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="images/stage-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+      <div class="photo rv" data-label="Фото"><img src="images/stage-4.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+    </div>
+    <p class="credit">Фото: А. Чепурняк · Академия ФББР</p>
+  </div>
+</section>
+
+<!-- ======= УЗНАЁШЬ СЕБЯ ======= -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div>
+          <span class="kicker">Это про тебя?</span>
+          <h2>Узнаёшь <em>себя?</em></h2>
+        </div>
+        <p class="lead">Если откликается хотя бы один пункт — значит, нам точно есть над чем поработать вместе.</p>
+      </div>
+      <div class="pains">
+        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник — новая жизнь, а через пару недель всё возвращается как было?</p></div>
+        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Не знаешь, какие упражнения делать, сколько подходов и правильная ли техника?</p></div>
+        <div class="pain rv"><div class="num">3</div><h3>Диеты не работают</h3><p>Жёсткие ограничения, срывы и чувство вины, а вес всё равно возвращается?</p></div>
+        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно держать мотивацию одной, когда некому подсказать и поддержать?</p></div>
+      </div>
+      <div class="pain-note rv">
+        <p>Со мной ты не одна — разберёмся вместе, шаг за шагом.</p>
+        <a href="#prices" class="btn btn-wine">Выбрать формат</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ПОДХОД ======= -->
+<section id="approach">
+  <div class="wrap">
+    <div class="approach">
+      <div class="rv" style="position:relative;z-index:1">
+        <span class="kicker" style="background:rgba(255,255,255,.12);color:var(--pink)">Мой подход</span>
+        <h2>Почему со мной <em>легко</em></h2>
+        <p class="lead">К каждой я ищу индивидуальный подход, чтобы тебе было комфортно работать и легко идти к своей цели.</p>
+      </div>
+      <div class="steps4">
+        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div><h3>Индивидуально</h3><p>Программа под твою цель, уровень, график и самочувствие — никаких шаблонов.</p></div>
+        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div><h3>Комфортно</h3><p>Со мной не страшно задавать вопросы и ошибаться — идём в твоём темпе.</p></div>
+        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></div><h3>Слышу тебя</h3><p>Я лояльный тренер: прислушиваюсь к пожеланиям и корректирую план, если что-то не подходит.</p></div>
+        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>На максимум</h3><p>Помогаю выложиться на все сто и дойти до результата, а не бросить на полпути.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ТАРИФЫ ======= -->
+<section id="prices">
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div>
+          <span class="kicker">Тарифы</span>
+          <h2>Выбери <em>свой</em> формат</h2>
+        </div>
+        <p class="lead">Сопровождение на месяц. Не уверена, что подойдёт? Напиши — подскажу.</p>
+      </div>
+
+      <div class="featured rv">
+        <div>
+          <span class="ribbon">★ Максимум результата</span>
+          <h3>Полное <em>сопровождение</em></h3>
+          <ul class="list">
+            <li>8 онлайн-тренировок со мной в месяц</li>
+            <li>Контроль питания</li>
+            <li>Программа под твою цель и уровень</li>
+            <li>Я рядом на каждом этапе пути</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="price">15 000 ₽<small> / мес</small></div>
+          <p>Самый быстрый путь к цели</p>
+          <a href="#contacts" class="btn btn-blue">Хочу этот тариф</a>
+        </div>
+      </div>
+
+      <div class="plans">
+        <div class="plan pink rv">
+          <span class="tag">Питание + тренировки</span>
+          <h3>Тренировки по видео и питание</h3>
+          <div class="opts">
+            <div class="opt"><span>3–5 раз в неделю<small>питание + тренировки по видео</small></span><b>11 000 ₽<i>/мес</i></b></div>
+            <div class="opt"><span>1–2 раза в неделю<small>питание + тренировки по видео</small></span><b>9 000 ₽<i>/мес</i></b></div>
+          </div>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+        <div class="plan blue rv">
+          <span class="tag">Только тренировки</span>
+          <h3>Тренировочный план</h3>
+          <div class="opts">
+            <div class="opt"><span>3+ раза в неделю<small>несколько тренировочных планов</small></span><b>9 000 ₽<i>/мес</i></b></div>
+            <div class="opt"><span>1–2 раза в неделю<small>тренировочный план</small></span><b>6 000 ₽<i>/мес</i></b></div>
+          </div>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+      </div>
+
+      <div class="nutri rv">
+        <div>
+          <span class="ribbon">Только питание</span>
+          <h3>Консультация <em>по питанию</em></h3>
+          <ul class="list two">
+            <li>Консультация 1–1,5 часа: все основы спортивной нутрициологии</li>
+            <li>Индивидуальный расчёт КБЖУ под любую цель</li>
+            <li>Как худеть только благодаря питанию</li>
+            <li>Как поддерживать форму и набирать мышечную массу</li>
+            <li>Знания и подход, которые пригодятся на всю жизнь</li>
+            <li>Вопрос/ответ в режиме онлайн</li>
+            <li>Telegram-канал с полезными ссылками и видео по нутрициологии</li>
+            <li>Поддержка 24/7 в питании и мотивации</li>
+            <li>Помощь в составлении продуктовой корзины и рационов</li>
+            <li>Помощь в выборе блюд в доставке</li>
+            <li>Ежедневная проверка рационов</li>
+          </ul>
+        </div>
+        <div class="price-box">
+          <div class="price">5 000 ₽</div>
+          <p>Питание без жёстких запретов</p>
+          <a href="#contacts" class="btn btn-wine">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= РАЗОВЫЕ ТРЕНИРОВКИ ======= -->
+<section id="single">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div>
+        <span class="kicker" style="background:var(--white)">Персональные тренировки</span>
+        <h2>Тренировки <em>со мной</em></h2>
+      </div>
+      <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
+    </div>
+    <div class="packs">
+      <div class="pack rv">
+        <div class="count">1</div>
+        <div class="what">тренировка</div>
+        <div class="price">1 700 ₽</div>
+        <div class="per">чтобы познакомиться</div>
+        <a href="#contacts" class="btn btn-blue">Записаться</a>
+      </div>
+      <div class="pack best rv">
+        <span class="badge">Выгодно</span>
+        <div class="count">5</div>
+        <div class="what">тренировок</div>
+        <div class="price">7 000 ₽</div>
+        <div class="per">1 400 ₽ за тренировку</div>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
+      </div>
+      <div class="pack rv">
+        <div class="count">10</div>
+        <div class="what">тренировок</div>
+        <div class="price">15 000 ₽</div>
+        <div class="per">1 500 ₽ за тренировку</div>
+        <a href="#contacts" class="btn btn-blue">Записаться</a>
+      </div>
+    </div>
+    <div class="includes rv">
+      <div>
+        <h3>Что входит в <em>онлайн-тренировку</em></h3>
+        <div class="meta"><span>⏱ 1,5–2 часа</span><span>🏠 дома или в зале</span></div>
+      </div>
+      <ul class="list two">
+        <li>Личный тренировочный план</li>
+        <li>Подробное объяснение техники онлайн</li>
+        <li>Постановка техники</li>
+        <li>Можно заниматься дома или в зале</li>
+        <li>Основы разминки и заминки</li>
+        <li>Индивидуальный расчёт КБЖУ для достижения целей</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КАК НАЧАТЬ ======= -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div>
+          <span class="kicker">Как начать</span>
+          <h2>Всего <em>3 шага</em></h2>
+        </div>
+      </div>
+      <ol class="how">
+        <li class="rv"><h3>Напиши мне</h3><p>В любом удобном мессенджере — расскажи о себе и своей цели.</p></li>
+        <li class="rv"><h3>Знакомимся</h3><p>Обсудим твой уровень, образ жизни, пожелания и подберём формат.</p></li>
+        <li class="rv"><h3>Начинаем</h3><p>Получаешь персональный план и идёшь к цели — а я рядом.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КОНТАКТЫ ======= -->
+<section id="contacts">
+  <div class="wrap">
+    <div class="contact">
+      <div class="rv">
+        <span class="kicker" style="background:rgba(255,255,255,.7)">Контакты</span>
+        <h2>Жду <em>тебя!</em></h2>
+        <p class="lead">Напиши мне любым удобным способом — отвечу на вопросы и подскажу, какой формат подойдёт именно тебе.</p>
+      </div>
+      <div class="socials rv">
+        <a class="soc" data-contact="telegram" href="#contacts" target="_blank" rel="noopener">
+          <span class="si tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.2L2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.8-1.3-1.5zM9.4 14.3l9-5.7c.4-.3.8-.1.5.2l-7.5 6.8-.3 3.2-1.7-4.5z"/></svg></span>
+          <span>Telegram<small data-handle="telegram">ник скоро</small></span>
+        </a>
+        <a class="soc" data-contact="whatsapp" href="#contacts" target="_blank" rel="noopener">
+          <span class="si wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></span>
+          <span>WhatsApp<small data-handle="whatsapp">номер скоро</small></span>
+        </a>
+        <a class="soc" data-contact="instagram" href="#contacts" target="_blank" rel="noopener">
+          <span class="si ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <span>Instagram*<small data-handle="instagram">ник скоро</small></span>
+        </a>
+        <a class="soc" data-contact="vk" href="#contacts" target="_blank" rel="noopener">
+          <span class="si vk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.4 7.3 4.2 7.7V6.3h2.9v4.4c1.8-.2 3.7-2.2 4.3-4.4h2.9a8.7 8.7 0 01-3.9 5.6 9 9 0 014.6 5.6h-3.2a5.6 5.6 0 00-4.7-4v4h-.4z"/></svg></span>
+          <span>ВКонтакте<small data-handle="vk">ссылка скоро</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="logo"><b>Юля</b><span>фитнес-тренер</span></a>
+    <span>© 2026 · Все права защищены</span>
+    <p class="note">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой на территории РФ.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="#contacts" class="btn btn-wine">Записаться на тренировку</a></div>
+
+<script>
+  /* ====== КОНТАКТЫ: впиши свои данные сюда ======
+     telegram  — ник без @          (пример: "yulia_fit")
+     whatsapp  — номер только цифрами (пример: "79991234567")
+     instagram — ник без @
+     vk        — адрес страницы после vk.com/ (пример: "id123" или "yulia_fit")   */
+  const CONTACTS = {
+    telegram:  "yuliakossst",
+    whatsapp:  "79081844822",
+    instagram: "yuliakossst",
+    vk:        ""
+  };
+
+  const build = {
+    telegram:  v => ["https://t.me/" + v, "@" + v],
+    whatsapp:  v => ["https://wa.me/" + v + "?text=" + encodeURIComponent("Привет, Юля! Хочу узнать про тренировки"),
+                     v.length === 11 ? "+" + v[0] + " " + v.slice(1,4) + " " + v.slice(4,7) + "-" + v.slice(7,9) + "-" + v.slice(9) : "+" + v],
+    instagram: v => ["https://instagram.com/" + v, "@" + v],
+    vk:        v => ["https://vk.com/" + v, "vk.com/" + v]
+  };
+  for (const key in CONTACTS) {
+    const v = (CONTACTS[key] || "").trim().replace(/^@/, "");
+    if (!v) continue;
+    const [href, label] = build[key](v);
+    document.querySelectorAll('[data-contact="' + key + '"]').forEach(a => a.href = href);
+    document.querySelectorAll('[data-handle="' + key + '"]').forEach(s => s.textContent = label);
+  }
+  /* незаполненные контакты скрываются */
+  document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
+
+  /* плавное появление блоков */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 }) : null;
+  document.querySelectorAll('.rv').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+</script>
+</body>
+</html>
