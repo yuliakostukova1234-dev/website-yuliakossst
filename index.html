@@ -223,10 +223,8 @@
   .story p{max-width:75ch}
   .ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
   .ba figure{background:var(--white);border-radius:var(--radius-l);padding:10px;margin:0}
-  .ba figure.wide{grid-column:1/-1;justify-self:center;width:min(100%,760px)}
-  @media (min-width:1001px){.ba{grid-template-columns:1fr 1fr 1.3fr;align-items:start}.ba figure.wide{grid-column:auto;width:auto}}
+  .ba{align-items:center}
   .ba img{width:100%;height:auto;border-radius:20px}
-  .ba figcaption{font-weight:700;font-size:14px;color:var(--wine);padding:10px 8px 4px}
   .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
   @media (max-width:760px){.ba{grid-template-columns:1fr}}
   /* ---------- stage gallery ---------- */
@@ -396,18 +394,11 @@
       <p>Я прошла в жизни стадии и недостатка массы тела, и её избытка. Поэтому на личном опыте знаю, как избавиться от лишнего веса, как набрать мышечную массу и как сделать самое сложное — поддерживать уже хорошую форму. Я помогаю с любыми запросами и целями.</p>
     </div>
     <div class="ba">
-      <figure class="rv"><img src="ba-front.jpg" alt="Юлия до и после: вид спереди" loading="lazy"><figcaption>Анфас · октябрь 2025 → октябрь 2026</figcaption></figure>
-      <figure class="rv"><img src="ba-side.jpg" alt="Юлия до и после: вид сбоку" loading="lazy"><figcaption>Профиль · октябрь 2025 → октябрь 2026</figcaption></figure>
-      <figure class="rv wide"><img src="ba-back.jpg" alt="Юлия до и после: вид со спины" loading="lazy"><figcaption>Спина</figcaption></figure>
+      <figure class="rv"><img src="ba-1.jpg" alt="Изменения формы Юлии: вид сбоку" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-2.jpg" alt="Изменения формы Юлии: вид спереди" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-3.jpg" alt="Изменения формы Юлии: профиль" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-4.jpg" alt="Изменения формы Юлии: вид со спины" loading="lazy"></figure>
     </div>
-    <h3 class="stage-title rv">На сцене · Чемпионат Санкт-Петербурга по бодибилдингу — 2026</h3>
-    <div class="stage">
-      <div class="photo rv" data-label="Фото"><img src="stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-4.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-    </div>
-    <p class="credit">Фото: А. Чепурняк · Академия ФББР</p>
   </div>
 </section>
 
@@ -417,7 +408,6 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <span class="kicker">Это про тебя?</span>
           <h2>Узнаёшь <em>себя?</em></h2>
         </div>
         <p class="lead">Если откликается хотя бы один пункт — значит, нам точно есть над чем поработать вместе.</p>
@@ -441,7 +431,6 @@
   <div class="wrap">
     <div class="approach">
       <div class="rv" style="position:relative;z-index:1">
-        <span class="kicker" style="background:rgba(255,255,255,.12);color:var(--pink)">Мой подход</span>
         <h2>Почему со мной <em>легко</em></h2>
         <p class="lead">К каждой я ищу индивидуальный подход, чтобы тебе было комфортно работать и легко идти к своей цели.</p>
       </div>
