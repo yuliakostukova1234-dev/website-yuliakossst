@@ -218,6 +218,17 @@
   .pack .btn{margin-top:22px;width:100%;padding:15px}
   @media (max-width:860px){.packs{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
 
+  /* ---------- results: story + before/after ---------- */
+  .story{background:var(--white);border-radius:var(--radius-l);padding:clamp(22px,3.4vw,36px);display:grid;gap:12px;max-width:none;font-size:clamp(16px,1.4vw,18px);color:var(--wine-deep)}
+  .story p{max-width:75ch}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .ba figure{background:var(--white);border-radius:var(--radius-l);padding:10px;margin:0}
+  .ba figure.wide{grid-column:1/-1;justify-self:center;width:min(100%,760px)}
+  @media (min-width:1001px){.ba{grid-template-columns:1fr 1fr 1.3fr;align-items:start}.ba figure.wide{grid-column:auto;width:auto}}
+  .ba img{width:100%;height:auto;border-radius:20px}
+  .ba figcaption{font-weight:700;font-size:14px;color:var(--wine);padding:10px 8px 4px}
+  .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
+  @media (max-width:760px){.ba{grid-template-columns:1fr}}
   /* ---------- stage gallery ---------- */
   .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
@@ -349,7 +360,7 @@
       <div class="rv">
         <span class="kicker">Обо мне</span>
         <h2>Привет, я <em>Юля</em></h2>
-        <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь своей желанной цели. А моя задача — сделать этот путь понятным, безопасным и комфортным.</p>
+        <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь желанной цели. Моя задача заключается в том, чтобы сделать этот путь безопасным, понятным и комфортным.</p>
         <p class="lead lead-note">Но важно помнить: результат в большей степени зависит от тебя самой. Нужно быть готовой включаться в работу и выполнять все рекомендации.</p>
         <div class="facts">
           <div class="fact">
@@ -358,7 +369,7 @@
           </div>
           <div class="fact">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-2M12 10l-4 1-2 3"/></svg></div>
-            <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о стандартах красоты. Организм должен соответствовать нашему образу жизни и облегчать её: давать силу мышцам для работы, прогулок с друзьями и достижений в других активностях и хобби.</p></div>
+            <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о внешней составляющей. Организм должен соответствовать образу жизни и делать обычную жизнь комфортнее: давать силу и энергию, чтобы гулять с друзьями, заниматься другими физическими активностями и заканчивать рабочий день без болей в спине.</p></div>
           </div>
           <div class="fact">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 12h2l1-2 1.5 4 1-2H16"/></svg></div>
@@ -376,10 +387,20 @@
     <div class="head-row rv">
       <div>
         <span class="kicker" style="background:var(--white)">Мой результат</span>
-        <h2>На <em>сцене</em></h2>
+        <h2>Мой <em>путь</em></h2>
       </div>
-      <p class="lead" style="color:var(--wine-deep)">Чемпионат Санкт-Петербурга по бодибилдингу — 2026. Путь к форме я знаю не по книжкам, а на своём опыте.</p>
     </div>
+    <div class="story rv">
+      <p>Я тренируюсь и изучаю основы фитнеса уже почти 7 лет. Начинала с домашних тренировок, поэтому знаю, что поддерживать хорошую форму и сильное тело можно не только в зале.</p>
+      <p>В зале мне удалось внушительно увеличить мышечные объёмы всего за год. Поэтому я уверена: если очень хочешь хороший результат, нужно быть готовой много работать.</p>
+      <p>Я прошла в жизни стадии и недостатка массы тела, и её избытка. Поэтому на личном опыте знаю, как избавиться от лишнего веса, как набрать мышечную массу и как сделать самое сложное — поддерживать уже хорошую форму. Я помогаю с любыми запросами и целями.</p>
+    </div>
+    <div class="ba">
+      <figure class="rv"><img src="ba-front.jpg" alt="Юлия до и после: вид спереди" loading="lazy"><figcaption>Анфас · октябрь 2025 → октябрь 2026</figcaption></figure>
+      <figure class="rv"><img src="ba-side.jpg" alt="Юлия до и после: вид сбоку" loading="lazy"><figcaption>Профиль · октябрь 2025 → октябрь 2026</figcaption></figure>
+      <figure class="rv wide"><img src="ba-back.jpg" alt="Юлия до и после: вид со спины" loading="lazy"><figcaption>Спина</figcaption></figure>
+    </div>
+    <h3 class="stage-title rv">На сцене · Чемпионат Санкт-Петербурга по бодибилдингу — 2026</h3>
     <div class="stage">
       <div class="photo rv" data-label="Фото"><img src="stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
       <div class="photo rv" data-label="Фото"><img src="stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
