@@ -15,7 +15,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237B1A3E'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' fill='%23F3C6D3' text-anchor='middle'%3E%D0%AE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
     --pink:#F3C6D3;
@@ -33,8 +33,8 @@
     --radius-m:20px;
     --shadow:0 18px 40px -18px rgba(123,26,62,.28);
     --shadow-blue:0 18px 34px -16px rgba(60,130,190,.45);
-    --head:"Unbounded", "Arial Black", sans-serif;
-    --script:"Marck Script", "Segoe Script", cursive;
+    --head:"Playfair Display", Georgia, "Times New Roman", serif;
+    --script:"Playfair Display", Georgia, "Times New Roman", serif;
     --body:"Manrope", "Segoe UI", Arial, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -98,8 +98,8 @@
   .hero-tag{display:inline-flex;align-items:center;gap:10px;max-width:520px;line-height:1.35;font-weight:700;color:var(--wine);background:rgba(255,255,255,.6);padding:9px 16px;border-radius:999px;font-size:15px}
   .dot{flex:none;width:9px;height:9px;border-radius:50%;background:#3FBF6A;box-shadow:0 0 0 4px rgba(63,191,106,.2)}
   .hero h1{margin:26px 0 0;line-height:.88}
-  .hero h1 .big{display:block;font-family:var(--head);font-weight:900;font-size:clamp(52px,9.2vw,132px);letter-spacing:-.04em;color:var(--white);text-shadow:0 10px 40px rgba(123,26,62,.18)}
-  .hero h1 .script{display:block;font-family:var(--script);font-weight:400;color:var(--wine);font-size:clamp(48px,7.6vw,104px);line-height:1;margin-top:.02em;padding-left:.3em;letter-spacing:0}
+  .hero h1 .big{display:block;font-family:var(--head);font-weight:900;font-size:clamp(46px,8vw,112px);letter-spacing:-.01em;color:var(--white);text-shadow:0 10px 40px rgba(123,26,62,.18)}
+  .hero h1 .script{display:block;font-family:var(--script);font-weight:400;color:var(--wine);font-size:clamp(40px,6.4vw,88px);line-height:1;margin-top:.06em;padding-left:.3em;letter-spacing:0}
   .hero p.sub{margin-top:26px;font-size:clamp(17px,1.6vw,21px);max-width:520px;color:var(--wine-deep)}
   .hero p.sub b{font-weight:800}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
@@ -267,6 +267,15 @@
     .fact .ic{width:44px;height:44px;border-radius:13px}
     .fact .ic svg{width:22px;height:22px}
   }
+  /* Playfair italic as the accent face */
+  .hero h1 .script, h2 em, .name-badge b, .featured h3 em, .nutri h3 em, .includes h3 em, .logo b, .brand span{font-style:italic;font-weight:500}
+  h2 em, .featured h3 em, .nutri h3 em, .includes h3 em{font-size:1em;transform:none}
+  .logo b{font-size:24px}
+  footer .logo b{font-size:22px}
+  .brand b{font-size:21px}
+  .brand span{font-size:16px}
+  .name-badge b{font-size:28px}
+  .logo span{font-family:var(--body)}
   /* mobile sticky CTA */
   .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
   .sticky-cta .btn{width:100%;box-shadow:0 16px 30px -10px rgba(86,14,41,.55)}
