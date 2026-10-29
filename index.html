@@ -229,9 +229,16 @@
   .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
   @media (max-width:760px){.ba{grid-template-columns:1fr}}
   /* ---------- reviews ---------- */
-  .reviews{columns:2 340px;column-gap:16px}
-  .reviews figure{break-inside:avoid;margin:0 0 16px;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow)}
-  .reviews img{width:100%;height:auto;border-radius:16px}
+  .reviews-wrap{position:relative}
+  .reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 4px 18px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent;align-items:flex-start}
+  .reviews::-webkit-scrollbar{height:6px}
+  .reviews::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+  .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
+  .reviews img{width:100%;height:auto;border-radius:16px;display:block}
+  .rev-nav{display:flex;gap:10px}
+  .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
+  .rev-nav button:disabled{opacity:.35;cursor:default}
+  .rev-nav button:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
   /* ---------- stage gallery ---------- */
   .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
@@ -573,8 +580,10 @@
 <!-- ======= ОТЗЫВЫ ======= -->
 <section id="reviews">
   <div class="wrap">
-    <div class="head-row rv"><div><h2>Отзывы</h2></div></div>
-    <div class="reviews">
+    <div class="head-row rv"><div><h2>Отзывы</h2></div>
+      <div class="rev-nav"><button type="button" id="revPrev" aria-label="Предыдущий отзыв">←</button><button type="button" id="revNext" aria-label="Следующий отзыв">→</button></div>
+    </div>
+    <div class="reviews" id="reviewsTrack">
       <figure class="rv"><img src="review-1.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img src="review-2.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img src="review-3.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
@@ -674,6 +683,17 @@
   }
   /* незаполненные контакты скрываются */
   document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
+
+  /* листание отзывов */
+  (function(){
+    const t=document.getElementById('reviewsTrack'), pr=document.getElementById('revPrev'), nx=document.getElementById('revNext');
+    if(!t) return;
+    const step=()=>{const f=t.querySelector('figure'); return f? f.getBoundingClientRect().width+16 : 300};
+    const upd=()=>{pr.disabled=t.scrollLeft<=4; nx.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4};
+    pr.addEventListener('click',()=>t.scrollBy({left:-step(),behavior:'smooth'}));
+    nx.addEventListener('click',()=>t.scrollBy({left:step(),behavior:'smooth'}));
+    t.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+  })();
 
   /* плавное появление блоков */
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
