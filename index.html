@@ -157,7 +157,7 @@
   .approach .lead{color:rgba(255,255,255,.75)}
   .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;position:relative;z-index:1}
   .ap{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-l);padding:26px}
-  .ap .ic{width:52px;height:52px;border-radius:16px;background:var(--pink);color:var(--wine);display:grid;place-items:center;margin-bottom:18px}
+  .ap .ic{font-size:36px;line-height:1;margin-bottom:16px}
   .ap .ic svg{width:26px;height:26px}
   .ap h3{font-family:var(--head);font-weight:600;font-size:18px;line-height:1.25}
   .ap p{color:rgba(255,255,255,.75);font-size:15.5px;margin-top:8px}
@@ -238,7 +238,7 @@
   .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
   .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
   .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
-  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 20px}
+  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0 0 20px}
   .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
   .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
   .rev-nav{display:flex;gap:10px}
@@ -425,7 +425,8 @@
       <li>Биомеханика движений человека, функциональная анатомия и библиотека упражнений на все мышечные группы</li>
       <li>Принципы рационального питания в работе фитнес-тренера, добавки и фармакологические препараты в фитнесе</li>
       <li>Миофасциальные методики в фитнесе</li>
-      <li>Стретчинг и работа с осанкой в сагиттальной плоскости</li>
+      <li>Стретчинг</li>
+      <li>Работа с осанкой в сагиттальной плоскости</li>
     </ul>
     <div class="reviews diplomas" id="dipTrack">
       <figure class="rv"><img src="cert-4.jpg" alt="Сертификат Национальной академии тренеров «Фитнес-тренер»" loading="lazy"></figure>
@@ -442,15 +443,15 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <h2>Узнаёшь <em>себя?</em></h2>
+          <h2>Узнаёшь себя?</h2>
         </div>
         <p class="lead">Если откликается хотя бы один пункт — значит, нам точно есть над чем поработать вместе.</p>
       </div>
       <div class="pains">
-        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник — новая жизнь, а через пару недель всё возвращается как было?</p></div>
-        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Не знаешь, какие упражнения делать, сколько подходов и правильная ли техника?</p></div>
-        <div class="pain rv"><div class="num">3</div><h3>Диеты не работают</h3><p>Жёсткие ограничения, срывы и чувство вины, а вес всё равно возвращается?</p></div>
-        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно держать мотивацию одной, когда некому подсказать и поддержать?</p></div>
+        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник начинаешь ходить в зал и пытаешься нормально питаться, а к воскресенью всё уже возвращается как было?</p></div>
+        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Ходишь на дорожке 5 минут, обходишь тренажёры кругами и идёшь домой? Не знаешь, какие упражнения помогут убрать боль в спине, а какие накачают ягодицы?</p></div>
+        <div class="pain rv"><div class="num">3</div><h3>Не знаешь, как питаться</h3><p>Сначала чистишь свой рацион, а потом срываешься на всё, что видишь в холодильнике? Затем винишь себя, и всё по новой?</p></div>
+        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно что-то делать, когда не понимаешь, куда двигаться, тяжело держать дисциплину и никто не поддерживает?</p></div>
       </div>
       <div class="pain-note rv">
         <p>Со мной ты не одна — разберёмся вместе, шаг за шагом.</p>
@@ -465,14 +466,14 @@
   <div class="wrap">
     <div class="approach">
       <div class="rv" style="position:relative;z-index:1">
-        <h2>Почему со мной <em>легко</em></h2>
+        <h2>Почему со мной легко</h2>
         <p class="lead">К каждой я ищу индивидуальный подход, чтобы тебе было комфортно работать и легко идти к своей цели.</p>
       </div>
       <div class="steps4">
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div><h3>Индивидуально</h3><p>Программа под твою цель, уровень, график и самочувствие — никаких шаблонов.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div><h3>Комфортно</h3><p>Со мной не страшно задавать вопросы и ошибаться — идём в твоём темпе.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></div><h3>Слышу тебя</h3><p>Я лояльный тренер: прислушиваюсь к пожеланиям и корректирую план, если что-то не подходит.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>На максимум</h3><p>Помогаю выложиться на все сто и дойти до результата, а не бросить на полпути.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🎯</div><h3>Индивидуально</h3><p>Программа тренировок и питания только под твою цель и особенности организма.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🤍</div><h3>Комфортно</h3><p>Мне всегда можно задать любой вопрос, и я отвечу максимально подробно. Глупых вопросов нет: глупо не задавать их и пытаться решить всё в одиночку.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">👂</div><h3>Слышу тебя</h3><p>Я максимально прислушиваюсь к твоим пожеланиям и корректирую план, если что-то не подходит.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🔥</div><h3>На максимум</h3><p>Помогаю получить наилучший результат и сделать фитнес привычкой, а не бросить на полпути. Но без твоей дисциплины здесь никак.</p></div>
       </div>
     </div>
   </div>
