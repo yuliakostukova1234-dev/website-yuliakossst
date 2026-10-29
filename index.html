@@ -253,6 +253,7 @@
   .tcard .btn{width:100%;padding:15px 24px;font-size:16px}
   .reviews.packs .pack{flex:0 0 min(330px,78vw);scroll-snap-align:start}
   .rev-nav{display:flex;gap:10px}
+  @media (max-width:760px){.dip-nav{display:none!important}}
   .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
   .rev-nav button:disabled{opacity:.35;cursor:default}
   .rev-nav button:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
@@ -429,7 +430,7 @@
 <section id="diplomas">
   <div class="wrap">
     <div class="head-row rv"><div><h2>Мои дипломы</h2></div>
-      <div class="rev-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
+      <div class="rev-nav dip-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
     </div>
     <ul class="edu rv">
       <li>Фитнес-тренер — Национальная академия тренеров</li>
