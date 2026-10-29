@@ -122,16 +122,17 @@
   }
 
   /* ---------- about ---------- */
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  .about-grid{display:block}
   @media (min-width:901px){.about-photos{position:sticky;top:110px}}
   .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .about-photos .photo{border-radius:var(--radius-l)}
   .about-photos .p1{grid-row:span 2;height:100%;min-height:100%}
   .about-photos .p2,.about-photos .p3{aspect-ratio:1/1.1}
   .facts{display:grid;gap:14px;margin-top:30px}
+  @media (min-width:901px){.facts{grid-template-columns:repeat(3,1fr)}.facts .fact{grid-template-columns:1fr;gap:6px;padding:22px 24px}.facts .fact .ic{width:auto;height:auto;justify-content:start}}
   .lead-note{margin-top:12px;font-size:16px;padding:14px 18px;border-left:3px solid var(--wine);background:var(--pink-soft);border-radius:0 14px 14px 0;color:var(--wine-deep)}
   .fact{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--pink-soft);border-radius:var(--radius-m);padding:18px 20px}
-  .fact .ic{width:56px;height:56px;border-radius:16px;background:var(--white);display:grid;place-items:center;color:var(--wine)}
+  .fact .ic{width:56px;height:56px;display:grid;place-items:center;font-size:34px;line-height:1}
   .fact .ic svg{width:28px;height:28px}
   .fact h3{font-family:var(--head);font-weight:600;font-size:17px;color:var(--wine);line-height:1.25}
   .fact p{color:var(--muted);font-size:15.5px;margin-top:4px}
@@ -273,7 +274,7 @@
     .btn{padding:16px 22px;font-size:16px}
     .plan{padding:20px 16px}
     .fact{grid-template-columns:44px 1fr;gap:12px;padding:16px}
-    .fact .ic{width:44px;height:44px;border-radius:13px}
+    .fact .ic{width:44px;height:44px;font-size:28px}
     .fact .ic svg{width:22px;height:22px}
   }
   /* Playfair italic as the accent face */
@@ -350,27 +351,21 @@
 <section id="about">
   <div class="wrap">
     <div class="card about-grid">
-      <div class="about-photos rv">
-        <div class="photo p1" data-label="Фото в зале"><img src="about-1.jpg" alt="Юля на тренировке" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p2" data-label="Сцена / соревнования"><img src="about-2.jpg" alt="Юля на соревнованиях" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p3" data-label="Сцена"><img src="about-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      </div>
       <div class="rv">
-        <span class="kicker">Обо мне</span>
-        <h2>Привет, я <em>Юля</em></h2>
+        <h2>Привет, я Юля</h2>
         <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь желанной цели. Моя задача заключается в том, чтобы сделать этот путь безопасным, понятным и комфортным.</p>
         <p class="lead lead-note">Но важно помнить: результат в большей степени зависит от тебя самой. Нужно быть готовой включаться в работу и выполнять все рекомендации.</p>
         <div class="facts">
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg></div>
+            <div class="ic" aria-hidden="true">🏆</div>
             <div><h3>Спортсменка в бодибилдинге</h3><p>Выступаю на соревнованиях по бодибилдингу и погружаюсь в этот спорт, поэтому сама прохожу путь детального построения тела и знаю, как должны работать нагрузки, восстановление и питание. Я хочу быть примером для своих подопечных, поддержкой и источником знаний.</p></div>
           </div>
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-2M12 10l-4 1-2 3"/></svg></div>
+            <div class="ic" aria-hidden="true">💃</div>
             <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о внешней составляющей. Организм должен соответствовать образу жизни и делать обычную жизнь комфортнее: давать силу и энергию, чтобы гулять с друзьями, заниматься другими физическими активностями и заканчивать рабочий день без болей в спине.</p></div>
           </div>
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 12h2l1-2 1.5 4 1-2H16"/></svg></div>
+            <div class="ic" aria-hidden="true">🩺</div>
             <div><h3>Высшее медицинское образование</h3><p>Оканчиваю ПСПбГМУ им. академика Павлова, поэтому подход к питанию и тренировкам максимально бережный, грамотный и безопасный.</p></div>
           </div>
         </div>
@@ -384,8 +379,7 @@
   <div class="wrap">
     <div class="head-row rv">
       <div>
-        <span class="kicker" style="background:var(--white)">Мой результат</span>
-        <h2>Мой <em>путь</em></h2>
+        <h2>Мой путь</h2>
       </div>
     </div>
     <div class="story rv">
@@ -394,10 +388,10 @@
       <p>Я прошла в жизни стадии и недостатка массы тела, и её избытка. Поэтому на личном опыте знаю, как избавиться от лишнего веса, как набрать мышечную массу и как сделать самое сложное — поддерживать уже хорошую форму. Я помогаю с любыми запросами и целями.</p>
     </div>
     <div class="ba">
-      <figure class="rv"><img src="ba-1.jpg" alt="Изменения формы Юлии: вид сбоку" loading="lazy"></figure>
-      <figure class="rv"><img src="ba-2.jpg" alt="Изменения формы Юлии: вид спереди" loading="lazy"></figure>
-      <figure class="rv"><img src="ba-3.jpg" alt="Изменения формы Юлии: профиль" loading="lazy"></figure>
-      <figure class="rv"><img src="ba-4.jpg" alt="Изменения формы Юлии: вид со спины" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-1.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-2.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-3.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img src="ba-4.jpg" alt="" loading="lazy"></figure>
     </div>
   </div>
 </section>
