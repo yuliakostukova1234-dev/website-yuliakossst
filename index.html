@@ -319,6 +319,16 @@
   .brand span{font-size:16px}
   .name-badge b{font-size:28px}
   .logo span{font-family:var(--body)}
+  /* mobile: horizontal swipe rows */
+  @media (max-width:760px){
+    .ba,.pains,.steps4{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent}
+    .ba::-webkit-scrollbar,.pains::-webkit-scrollbar,.steps4::-webkit-scrollbar{height:5px}
+    .ba::-webkit-scrollbar-thumb,.pains::-webkit-scrollbar-thumb,.steps4::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+    .ba>figure{flex:0 0 86%;scroll-snap-align:start}
+    .pains>.pain,.steps4>.ap{flex:0 0 78%;scroll-snap-align:start}
+    .steps4{scrollbar-color:var(--pink) transparent}
+    .steps4::-webkit-scrollbar-thumb{background:var(--pink)}
+  }
   /* mobile sticky CTA */
   .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
   .sticky-cta .btn{width:100%;box-shadow:0 16px 30px -10px rgba(86,14,41,.55)}
@@ -644,7 +654,7 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <h2>3 Шага, чтобы начать</h2>
+          <h2>Всего 3 шага, чтобы начать</h2>
         </div>
       </div>
       <ol class="how">
@@ -662,6 +672,7 @@
     <div class="contact">
       <div class="rv">
         <h2>Жду тебя!</h2>
+        <p class="lead">Чтобы связаться со мной и начать работу, напиши мне в Telegram.</p>
       </div>
       <div class="socials rv">
         <a class="soc" data-contact="telegram" href="#contacts" target="_blank" rel="noopener">
