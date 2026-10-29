@@ -238,7 +238,7 @@
   .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
   .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
   .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
-  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0 0 20px}
+  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:12px;margin:0 0 20px}
   .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
   .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
   .tariff-note{color:var(--muted);font-size:15.5px;margin:-20px 0 22px;max-width:60ch}
@@ -252,8 +252,12 @@
   .tcard .list li{font-size:15px}
   .tcard .btn{width:100%;padding:15px 24px;font-size:16px}
   .reviews.packs .pack{flex:0 0 min(330px,78vw);scroll-snap-align:start}
+  .single-card .pack{background:var(--pink-soft)}
+  @media (max-width:760px){.reviews.packs .pack{flex-basis:70vw}.single-card{display:flex;flex-direction:column}.single-card .head-row{display:contents}.single-card .head-row>div:first-child{margin-bottom:22px}.single-card .rev-nav{order:2;justify-content:center;margin-top:4px}.single-card .includes{order:3}}
+  .single-card .includes{background:var(--pink-soft);margin-top:20px}
+  .single-card .head-row .lead{margin-top:12px}
   .rev-nav{display:flex;gap:10px}
-  @media (max-width:760px){.dip-nav{display:none!important}}
+  @media (max-width:760px){#diplomas .wrap{display:flex;flex-direction:column}#diplomas .head-row{display:contents}#diplomas .head-row>div:first-child{margin-bottom:24px}.dip-nav{order:10;justify-content:center;margin-top:6px}.diplomas figure{flex:0 0 82vw}.diplomas img{width:100%;height:auto;max-width:none}}
   .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
   .rev-nav button:disabled{opacity:.35;cursor:default}
   .rev-nav button:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
@@ -267,7 +271,7 @@
   /* ---------- how ---------- */
   .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
   .how li{list-style:none;background:var(--pink-soft);border-radius:var(--radius-l);padding:28px;position:relative}
-  .how li::before{counter-increment:s;content:counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--white);-webkit-text-stroke:2px var(--wine);display:block;margin-bottom:16px}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--wine);display:block;margin-bottom:16px}
   .how h3{font-family:var(--head);font-weight:600;font-size:19px;color:var(--wine)}
   .how p{color:var(--muted);margin-top:8px;font-size:15.5px}
   @media (max-width:860px){.how{grid-template-columns:1fr}}
@@ -433,12 +437,8 @@
       <div class="rev-nav dip-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
     </div>
     <ul class="edu rv">
-      <li>Фитнес-тренер — Национальная академия тренеров</li>
-      <li>Биомеханика движений человека, функциональная анатомия и библиотека упражнений на все мышечные группы</li>
-      <li>Принципы рационального питания в работе фитнес-тренера, добавки и фармакологические препараты в фитнесе</li>
-      <li>Миофасциальные методики в фитнесе</li>
       <li>Стретчинг</li>
-      <li>Работа с осанкой в сагиттальной плоскости</li>
+      <li>Принципы работы с осанкой в сагиттальной плоскости</li>
     </ul>
     <div class="reviews diplomas" id="dipTrack">
       <figure class="rv"><img src="cert-4.jpg" alt="Сертификат Национальной академии тренеров «Фитнес-тренер»" loading="lazy"></figure>
@@ -551,6 +551,7 @@
 <!-- ======= РАЗОВЫЕ ТРЕНИРОВКИ ======= -->
 <section id="single">
   <div class="wrap">
+    <div class="card single-card">
     <div class="head-row rv">
       <div>
         <h2>Тренировки со мной по онлайн-созвону</h2>
@@ -583,7 +584,7 @@
     </div>
     <div class="includes rv">
       <div>
-        <h3>Что входит в <em>онлайн-тренировку</em></h3>
+        <h3>Что входит в онлайн-тренировку</h3>
         <div class="meta"><span>⏱ 1,5–2 часа</span><span>🏠 дома или в зале</span></div>
       </div>
       <ul class="list two">
@@ -594,6 +595,7 @@
         <li>Основы разминки и заминки</li>
         <li>Индивидуальный расчёт КБЖУ для достижения целей</li>
       </ul>
+    </div>
     </div>
   </div>
 </section>
@@ -642,7 +644,7 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <h2>3 шага, чтобы начать</h2>
+          <h2>3 Шага, чтобы начать</h2>
         </div>
       </div>
       <ol class="how">
