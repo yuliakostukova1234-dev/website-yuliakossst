@@ -208,7 +208,7 @@
   @media (max-width:860px){.includes{grid-template-columns:1fr}}
 
   /* ---------- single trainings ---------- */
-  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
   .pack{background:var(--white);border-radius:var(--radius-l);padding:30px;text-align:center;position:relative;border:2px solid transparent}
   .pack.best{border-color:var(--wine)}
   .pack .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--wine);color:var(--white);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;white-space:nowrap}
@@ -217,7 +217,7 @@
   .pack .price{font-size:40px;margin-top:18px}
     .pack .per{color:var(--muted);font-size:14.5px;margin-top:6px;min-height:22px}
   .pack .btn{margin-top:22px;width:100%;padding:15px}
-  @media (max-width:860px){.packs{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
+  
 
   /* ---------- results: story + before/after ---------- */
   .story{background:var(--white);border-radius:var(--radius-l);padding:clamp(22px,3.4vw,36px);display:grid;gap:12px;max-width:none;font-size:clamp(16px,1.4vw,18px);color:var(--wine-deep)}
@@ -241,6 +241,17 @@
   .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0 0 20px}
   .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
   .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
+  .tariff-note{color:var(--muted);font-size:15.5px;margin:-20px 0 22px;max-width:60ch}
+  .tariffs{align-items:flex-start}
+  .tcard{flex:0 0 min(340px,82vw);scroll-snap-align:start;background:var(--pink-soft);border-radius:var(--radius-l);padding:26px 24px;display:flex;flex-direction:column;gap:12px}
+  .tcard.top{background:linear-gradient(150deg,var(--pink-soft),var(--pink-2));outline:2px solid var(--wine);outline-offset:-2px}
+  .tcard .tag{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .tcard h3{font-family:var(--head);font-weight:700;font-size:22px;color:var(--wine);line-height:1.15}
+  .tcard .price{font-size:36px}
+  .tcard .list{margin-top:4px;flex:1;align-content:start}
+  .tcard .list li{font-size:15px}
+  .tcard .btn{width:100%;padding:15px 24px;font-size:16px}
+  .reviews.packs .pack{flex:0 0 min(330px,78vw);scroll-snap-align:start}
   .rev-nav{display:flex;gap:10px}
   .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
   .rev-nav button:disabled{opacity:.35;cursor:default}
@@ -255,7 +266,7 @@
   /* ---------- how ---------- */
   .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
   .how li{list-style:none;background:var(--pink-soft);border-radius:var(--radius-l);padding:28px;position:relative}
-  .how li::before{counter-increment:s;content:"0" counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--white);-webkit-text-stroke:2px var(--wine);display:block;margin-bottom:16px}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--white);-webkit-text-stroke:2px var(--wine);display:block;margin-bottom:16px}
   .how h3{font-family:var(--head);font-weight:600;font-size:19px;color:var(--wine)}
   .how p{color:var(--muted);margin-top:8px;font-size:15.5px}
   @media (max-width:860px){.how{grid-template-columns:1fr}}
@@ -484,74 +495,52 @@
   <div class="wrap">
     <div class="card">
       <div class="head-row rv">
-        <div>
-          <span class="kicker">Тарифы</span>
-          <h2>Выбери <em>свой</em> формат</h2>
-        </div>
-        <p class="lead">Сопровождение на месяц. Не уверена, что подойдёт? Напиши — подскажу.</p>
+        <div><h2>Тарифы</h2></div>
+        <div class="rev-nav"><button type="button" id="tarPrev" aria-label="Предыдущий тариф">←</button><button type="button" id="tarNext" aria-label="Следующий тариф">→</button></div>
       </div>
-
-      <div class="featured rv">
-        <div>
-          <span class="ribbon">★ Максимум результата</span>
-          <h3>Полное <em>сопровождение</em></h3>
-          <ul class="list">
-            <li>8 онлайн-тренировок со мной в месяц</li>
-            <li>Контроль питания</li>
-            <li>Программа под твою цель и уровень</li>
-            <li>Я рядом на каждом этапе пути</li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <div class="price">15 000 ₽<small> / мес</small></div>
-          <p>Самый быстрый путь к цели</p>
-          <a href="#contacts" class="btn btn-wine">Хочу этот тариф</a>
-        </div>
-      </div>
-
-      <div class="plans">
-        <div class="plan pink rv">
-          <span class="tag">Питание + тренировки</span>
-          <h3>Тренировки по видео и питание</h3>
-          <div class="opts">
-            <div class="opt"><span>3–5 раз в неделю<small>питание + тренировки по видео</small></span><b>11 000 ₽<i>/мес</i></b></div>
-            <div class="opt"><span>1–2 раза в неделю<small>питание + тренировки по видео</small></span><b>9 000 ₽<i>/мес</i></b></div>
-          </div>
-          <a href="#contacts" class="btn btn-wine">Выбрать</a>
-        </div>
-        <div class="plan blue rv">
-          <span class="tag">Только тренировки</span>
-          <h3>Тренировочный план</h3>
-          <div class="opts">
-            <div class="opt"><span>3+ раза в неделю<small>несколько тренировочных планов</small></span><b>9 000 ₽<i>/мес</i></b></div>
-            <div class="opt"><span>1–2 раза в неделю<small>тренировочный план</small></span><b>6 000 ₽<i>/мес</i></b></div>
-          </div>
-          <a href="#contacts" class="btn btn-wine">Выбрать</a>
-        </div>
-      </div>
-
-      <div class="nutri rv">
-        <div>
-          <span class="ribbon">Только питание</span>
-          <h3>Консультация <em>по питанию</em></h3>
-          <ul class="list two">
-            <li>Консультация 1–1,5 часа: все основы спортивной нутрициологии</li>
-            <li>Индивидуальный расчёт КБЖУ под любую цель</li>
-            <li>Как худеть только благодаря питанию</li>
-            <li>Как поддерживать форму и набирать мышечную массу</li>
-            <li>Знания и подход, которые пригодятся на всю жизнь</li>
-            <li>Вопрос/ответ в режиме онлайн</li>
-            <li>Telegram-канал с полезными ссылками и видео по нутрициологии</li>
-            <li>Поддержка 24/7 в питании и мотивации</li>
-            <li>Помощь в составлении продуктовой корзины и рационов</li>
-            <li>Помощь в выборе блюд в доставке</li>
-            <li>Ежедневная проверка рационов</li>
-          </ul>
-        </div>
-        <div class="price-box">
+      <p class="tariff-note rv">*Если не знаешь, какой тариф выбрать, напиши мне об этом, и я тебя сориентирую.</p>
+      <div class="reviews tariffs" id="tarTrack">
+        <div class="tcard">
+          <span class="tag">Только питание</span>
+          <h3>Консультация по питанию</h3>
           <div class="price">5 000 ₽</div>
-          <p>Питание без жёстких запретов</p>
+          <ul class="list"><li>Консультация 1–1,5 часа: все основы спортивной нутрициологии</li><li>Индивидуальный расчёт КБЖУ под любую цель</li><li>Как худеть только благодаря питанию</li><li>Как поддерживать форму и набирать мышечную массу</li><li>Знания и подход, которые пригодятся на всю жизнь</li><li>Вопрос/ответ в режиме онлайн</li><li>Telegram-канал с полезными ссылками и видео по нутрициологии</li><li>Поддержка 24/7 в питании и мотивации</li><li>Помощь в составлении продуктовой корзины и рационов</li><li>Помощь в выборе блюд в доставке</li><li>Ежедневная проверка рационов</li></ul>
           <a href="#contacts" class="btn btn-wine">Записаться</a>
+        </div>
+        <div class="tcard">
+          <span class="tag">Только тренировки</span>
+          <h3>Тренировочный план 1–2 раза в неделю</h3>
+          <div class="price">6 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Тренировочный план 1–2 раза в неделю</li><li>Тренировки по видео</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+        <div class="tcard">
+          <span class="tag">Только тренировки</span>
+          <h3>Тренировки 3+ раза в неделю</h3>
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Несколько тренировочных планов</li><li>Тренировки 3 и более раз в неделю</li><li>Тренировки по видео</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+        <div class="tcard">
+          <span class="tag">Питание + тренировки</span>
+          <h3>Питание и тренировки 1–2 раза в неделю</h3>
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Питание</li><li>Тренировки по видео 1–2 раза в неделю</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+        <div class="tcard">
+          <span class="tag">Питание + тренировки</span>
+          <h3>Питание и тренировки 3–5 раз в неделю</h3>
+          <div class="price">11 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Питание</li><li>Тренировки по видео 3–5 раз в неделю</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+        </div>
+        <div class="tcard top">
+          <span class="tag">★ Максимум результата</span>
+          <h3>Полное сопровождение</h3>
+          <div class="price">15 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>8 онлайн-тренировок со мной в месяц</li><li>Контроль питания</li><li>Программа под твою цель и уровень</li><li>Я рядом на каждом этапе пути</li></ul>
+          <a href="#contacts" class="btn btn-wine">Хочу этот тариф</a>
         </div>
       </div>
     </div>
@@ -563,11 +552,12 @@
   <div class="wrap">
     <div class="head-row rv">
       <div>
-        <h2>Тренировки со мной</h2>
+        <h2>Тренировки со мной по онлайн-созвону</h2>
+        <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
       </div>
-      <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
+      <div class="rev-nav"><button type="button" id="packPrev" aria-label="Предыдущий пакет">←</button><button type="button" id="packNext" aria-label="Следующий пакет">→</button></div>
     </div>
-    <div class="packs">
+    <div class="reviews packs" id="packTrack">
       <div class="pack rv">
         <div class="count">1</div>
         <div class="what">тренировка</div>
@@ -651,14 +641,13 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <span class="kicker">Как начать</span>
-          <h2>Всего <em>3 шага</em></h2>
+          <h2>3 шага, чтобы начать</h2>
         </div>
       </div>
       <ol class="how">
-        <li class="rv"><h3>Напиши мне</h3><p>В любом удобном мессенджере — расскажи о себе и своей цели.</p></li>
-        <li class="rv"><h3>Знакомимся</h3><p>Обсудим твой уровень, образ жизни, пожелания и подберём формат.</p></li>
-        <li class="rv"><h3>Начинаем</h3><p>Получаешь персональный план и идёшь к цели — а я рядом.</p></li>
+        <li class="rv"><h3>Напиши мне в Telegram</h3><p>Расскажи о себе и своей цели.</p></li>
+        <li class="rv"><h3>Выбери тариф</h3><p>Выбери тариф, или вместе обсудим, какой формат будет для тебя самым удобным.</p></li>
+        <li class="rv"><h3>Начинаем</h3><p>Оплачиваешь, получаешь персональный план, и мы начинаем строить тело мечты.</p></li>
       </ol>
     </div>
   </div>
@@ -669,26 +658,16 @@
   <div class="wrap">
     <div class="contact">
       <div class="rv">
-        <span class="kicker" style="background:rgba(255,255,255,.7)">Контакты</span>
-        <h2>Жду <em>тебя!</em></h2>
-        <p class="lead">Напиши мне любым удобным способом — отвечу на вопросы и подскажу, какой формат подойдёт именно тебе.</p>
+        <h2>Жду тебя!</h2>
       </div>
       <div class="socials rv">
         <a class="soc" data-contact="telegram" href="#contacts" target="_blank" rel="noopener">
           <span class="si tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.2L2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.8-1.3-1.5zM9.4 14.3l9-5.7c.4-.3.8-.1.5.2l-7.5 6.8-.3 3.2-1.7-4.5z"/></svg></span>
           <span>Telegram<small data-handle="telegram">ник скоро</small></span>
         </a>
-        <a class="soc" data-contact="whatsapp" href="#contacts" target="_blank" rel="noopener">
-          <span class="si wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></span>
-          <span>WhatsApp<small data-handle="whatsapp">номер скоро</small></span>
-        </a>
         <a class="soc" data-contact="instagram" href="#contacts" target="_blank" rel="noopener">
           <span class="si ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
           <span>Instagram*<small data-handle="instagram">ник скоро</small></span>
-        </a>
-        <a class="soc" data-contact="vk" href="#contacts" target="_blank" rel="noopener">
-          <span class="si vk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.4 7.3 4.2 7.7V6.3h2.9v4.4c1.8-.2 3.7-2.2 4.3-4.4h2.9a8.7 8.7 0 01-3.9 5.6 9 9 0 014.6 5.6h-3.2a5.6 5.6 0 00-4.7-4v4h-.4z"/></svg></span>
-          <span>ВКонтакте<small data-handle="vk">ссылка скоро</small></span>
         </a>
       </div>
     </div>
@@ -738,11 +717,11 @@
   document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
 
   /* листание отзывов */
-  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext'],['dipTrack','dipPrev','dipNext']].forEach(function(ids){
+  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext'],['dipTrack','dipPrev','dipNext'],['tarTrack','tarPrev','tarNext'],['packTrack','packPrev','packNext']].forEach(function(ids){
     const t=document.getElementById(ids[0]), pr=document.getElementById(ids[1]), nx=document.getElementById(ids[2]);
     if(!t||!pr||!nx) return;
     const step=()=>{const f=t.querySelector('figure'); return f? f.getBoundingClientRect().width+16 : 300};
-    const upd=()=>{pr.disabled=t.scrollLeft<=4; nx.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4};
+    const upd=()=>{pr.disabled=t.scrollLeft<=4; nx.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4; pr.parentElement.style.display=(t.scrollWidth<=t.clientWidth+4)?'none':''};
     pr.addEventListener('click',()=>t.scrollBy({left:-step(),behavior:'smooth'}));
     nx.addEventListener('click',()=>t.scrollBy({left:step(),behavior:'smooth'}));
     t.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
