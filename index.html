@@ -228,6 +228,10 @@
   .ba img{width:100%;height:auto;border-radius:20px}
   .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
   @media (max-width:760px){.ba{grid-template-columns:1fr}}
+  /* ---------- reviews ---------- */
+  .reviews{columns:2 340px;column-gap:16px}
+  .reviews figure{break-inside:avoid;margin:0 0 16px;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow)}
+  .reviews img{width:100%;height:auto;border-radius:16px}
   /* ---------- stage gallery ---------- */
   .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
@@ -562,6 +566,19 @@
         <li>Основы разминки и заминки</li>
         <li>Индивидуальный расчёт КБЖУ для достижения целей</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ОТЗЫВЫ ======= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Отзывы</h2></div></div>
+    <div class="reviews">
+      <figure class="rv"><img src="review-1.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img src="review-2.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img src="review-3.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img src="review-4.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
     </div>
   </div>
 </section>
