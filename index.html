@@ -236,6 +236,11 @@
   .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
   .reviews img{width:100%;height:auto;border-radius:16px;display:block}
   .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
+  .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
+  .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
+  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 20px}
+  .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
+  .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
   .rev-nav{display:flex;gap:10px}
   .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
   .rev-nav button:disabled{opacity:.35;cursor:default}
@@ -405,6 +410,28 @@
       <figure class="rv"><img src="ba-2.jpg" alt="" loading="lazy"></figure>
       <figure class="rv"><img src="ba-3.jpg" alt="" loading="lazy"></figure>
       <figure class="rv"><img src="ba-4.jpg" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ДИПЛОМЫ ======= -->
+<section id="diplomas">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Мои дипломы</h2></div>
+      <div class="rev-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
+    </div>
+    <ul class="edu rv">
+      <li>Фитнес-тренер — Национальная академия тренеров</li>
+      <li>Биомеханика движений человека, функциональная анатомия и библиотека упражнений на все мышечные группы</li>
+      <li>Принципы рационального питания в работе фитнес-тренера, добавки и фармакологические препараты в фитнесе</li>
+      <li>Миофасциальные методики в фитнесе</li>
+      <li>Стретчинг и работа с осанкой в сагиттальной плоскости</li>
+    </ul>
+    <div class="reviews diplomas" id="dipTrack">
+      <figure class="rv"><img src="cert-4.jpg" alt="Сертификат Национальной академии тренеров «Фитнес-тренер»" loading="lazy"></figure>
+      <figure class="rv"><img src="cert-1.jpg" alt="Сертификат ZHD: биомеханика движений человека" loading="lazy"></figure>
+      <figure class="rv"><img src="cert-2.jpg" alt="Сертификат ZHD: принципы рационального питания" loading="lazy"></figure>
+      <figure class="rv"><img src="cert-3.jpg" alt="Сертификат ZHD: миофасциальные методики в фитнесе" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -710,7 +737,7 @@
   document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
 
   /* листание отзывов */
-  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext']].forEach(function(ids){
+  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext'],['dipTrack','dipPrev','dipNext']].forEach(function(ids){
     const t=document.getElementById(ids[0]), pr=document.getElementById(ids[1]), nx=document.getElementById(ids[2]);
     if(!t||!pr||!nx) return;
     const step=()=>{const f=t.querySelector('figure'); return f? f.getBoundingClientRect().width+16 : 300};
