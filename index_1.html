@@ -4,9 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Юлия Костюкова — фитнес-тренер онлайн</title>
-<meta name="description" content="Онлайн-тренировки, питание и сопровождение для девушек. Индивидуальный подход, комфорт и поддержка на пути к цели.">
+<meta name="description" content="Юлия Костюкова — фитнес-тренер онлайн">
 <meta property="og:title" content="Юлия Костюкова — фитнес-тренер онлайн">
-<meta property="og:description" content="Тренировки, питание и поддержка с индивидуальным подходом. Выбери свой формат и напиши мне.">
+<meta property="og:description" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta property="og:site_name" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:description" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:image" content="https://yuliakossst.ru/og.jpg">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://yuliakossst.ru/og.jpg">
 <meta property="og:url" content="https://yuliakossst.ru/">
@@ -38,9 +43,9 @@
     --body:"Manrope", "Segoe UI", Arial, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{scroll-behavior:smooth;scroll-padding-top:110px}
   body{font-family:var(--body);color:var(--ink);background:var(--pink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{display:block;max-width:100%}
+  img{display:block;max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
   .wrap{width:min(1200px,100% - 32px);margin-inline:auto}
 
@@ -108,30 +113,29 @@
   .hero-photo{position:relative;justify-self:center;width:min(100%,470px)}
   .hero-photo .photo img{object-position:center 18%}
   .hero-photo .photo{aspect-ratio:2/3;border-radius:220px 220px 36px 36px;box-shadow:0 40px 70px -30px rgba(86,14,41,.45);border:8px solid rgba(255,255,255,.65)}
-  .name-badge{position:absolute;left:-28px;bottom:48px;background:var(--white);border-radius:22px;padding:14px 22px 16px;text-align:center;box-shadow:var(--shadow)}
-  .name-badge b{display:block;font-family:var(--script);font-weight:400;font-size:34px;line-height:1.05;color:var(--wine);margin:2px 0}
-  .name-badge small{display:block;font-weight:700;font-size:13px;color:var(--muted)}
-  .float-badge{position:absolute;right:-14px;top:40px;background:var(--wine);color:var(--white);border-radius:18px;padding:12px 16px;font-weight:700;font-size:14px;line-height:1.3;box-shadow:var(--shadow);transform:rotate(4deg)}
-  .float-badge b{font-family:var(--head);font-size:16px;display:block}
-  @media (max-width:900px){
+  .name-badge,.float-badge{position:absolute;color:var(--wine);background:rgba(255,252,253,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:16px;padding:10px 14px;font-family:var(--body);font-weight:600;font-size:14px;line-height:1.3}
+  .name-badge{left:18px;bottom:22px}
+  .float-badge{right:18px;top:40px}
+    @media (max-width:900px){
     .hero-card{grid-template-columns:1fr;min-height:0}
     .hero-photo{order:-1;width:min(100%,320px)}
     .hero-cta .btn{flex:1 1 220px}
-    .name-badge{left:-8px}
-    .float-badge{right:-6px}
+    .name-badge{left:14px;bottom:16px}
+    .float-badge{right:14px;top:28px}
   }
 
   /* ---------- about ---------- */
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  .about-grid{display:block}
   @media (min-width:901px){.about-photos{position:sticky;top:110px}}
   .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .about-photos .photo{border-radius:var(--radius-l)}
   .about-photos .p1{grid-row:span 2;height:100%;min-height:100%}
   .about-photos .p2,.about-photos .p3{aspect-ratio:1/1.1}
   .facts{display:grid;gap:14px;margin-top:30px}
+  @media (min-width:901px){.facts{grid-template-columns:repeat(3,1fr)}.facts .fact{grid-template-columns:1fr;gap:6px;padding:22px 24px}.facts .fact .ic{width:auto;height:auto;justify-content:start}}
   .lead-note{margin-top:12px;font-size:16px;padding:14px 18px;border-left:3px solid var(--wine);background:var(--pink-soft);border-radius:0 14px 14px 0;color:var(--wine-deep)}
   .fact{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--pink-soft);border-radius:var(--radius-m);padding:18px 20px}
-  .fact .ic{width:56px;height:56px;border-radius:16px;background:var(--white);display:grid;place-items:center;color:var(--wine)}
+  .fact .ic{width:56px;height:56px;display:grid;place-items:center;font-size:34px;line-height:1}
   .fact .ic svg{width:28px;height:28px}
   .fact h3{font-family:var(--head);font-weight:600;font-size:17px;color:var(--wine);line-height:1.25}
   .fact p{color:var(--muted);font-size:15.5px;margin-top:4px}
@@ -156,7 +160,7 @@
   .approach .lead{color:rgba(255,255,255,.75)}
   .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;position:relative;z-index:1}
   .ap{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-l);padding:26px}
-  .ap .ic{width:52px;height:52px;border-radius:16px;background:var(--pink);color:var(--wine);display:grid;place-items:center;margin-bottom:18px}
+  .ap .ic{font-size:36px;line-height:1;margin-bottom:16px}
   .ap .ic svg{width:26px;height:26px}
   .ap h3{font-family:var(--head);font-weight:600;font-size:18px;line-height:1.25}
   .ap p{color:rgba(255,255,255,.75);font-size:15.5px;margin-top:8px}
@@ -207,7 +211,7 @@
   @media (max-width:860px){.includes{grid-template-columns:1fr}}
 
   /* ---------- single trainings ---------- */
-  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
   .pack{background:var(--white);border-radius:var(--radius-l);padding:30px;text-align:center;position:relative;border:2px solid transparent}
   .pack.best{border-color:var(--wine)}
   .pack .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--wine);color:var(--white);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;white-space:nowrap}
@@ -216,8 +220,60 @@
   .pack .price{font-size:40px;margin-top:18px}
     .pack .per{color:var(--muted);font-size:14.5px;margin-top:6px;min-height:22px}
   .pack .btn{margin-top:22px;width:100%;padding:15px}
-  @media (max-width:860px){.packs{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
+  
 
+  /* ---------- results: story + before/after ---------- */
+  .story{background:var(--white);border-radius:var(--radius-l);padding:clamp(22px,3.4vw,36px);display:grid;gap:12px;max-width:none;font-size:clamp(16px,1.4vw,18px);color:var(--wine-deep)}
+  .story p{max-width:75ch}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .ba figure{background:var(--white);border-radius:var(--radius-l);padding:10px;margin:0}
+  .ba{align-items:center}
+  .ba img{width:100%;height:auto;border-radius:20px}
+  .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
+  @media (max-width:760px){.ba{grid-template-columns:1fr}}
+  /* ---------- reviews ---------- */
+  .reviews-wrap{position:relative}
+  .reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 4px 18px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent;align-items:flex-start}
+  .reviews::-webkit-scrollbar{height:6px}
+  .reviews::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+  .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
+  .reviews img{width:100%;height:auto;border-radius:16px;display:block}
+  .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
+  .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
+  .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
+  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:12px;margin:0 0 20px}
+  .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
+  .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
+  .tariff-note{color:var(--muted);font-size:15.5px;margin:-20px 0 22px;max-width:60ch}
+  .tariffs{align-items:flex-start}
+  @media (max-width:640px){.tariffs{padding-left:0;padding-right:0;scroll-padding:0}.tariffs .tcard{flex:0 0 100%;scroll-snap-stop:always}}
+  .tcard{flex:0 0 min(340px,82vw);scroll-snap-align:start;background:var(--pink-soft);border-radius:var(--radius-l);padding:0;overflow:hidden;display:flex;flex-direction:column;gap:0}
+  .tcard.top{background:linear-gradient(150deg,var(--pink-soft),var(--pink-2));outline:2px solid var(--wine);outline-offset:-2px}
+  .tcard .tag{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .tcard h3{font-family:var(--head);font-weight:700;font-size:22px;color:var(--wine);line-height:1.15}
+  .tcard .sub{font-weight:700;font-size:16px;color:var(--wine-deep);margin-top:-6px}
+  .tcard .where{background:var(--pink);color:var(--wine-deep);font-weight:800;font-size:15.5px;line-height:1.4;padding:10px 14px;border-radius:16px}
+  .tcard .hd{background:var(--wine);padding:22px 24px 18px;display:flex;flex-direction:column;gap:6px}
+  .tcard .hd h3{color:#FFFCFD;font-size:34px;line-height:1.05}
+  .tcard .hd .sub{color:var(--pink);margin:0}
+  .tcard .bd{padding:18px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .tcard.top .hd{background:linear-gradient(135deg,#560E29,#9B2A55)}
+  .tcard.top .hd h3::after{content:" 👑"}
+  .tcard .price{font-size:36px}
+  .tcard .list{margin-top:4px;flex:1;align-content:start}
+  .tcard .list li{font-size:14.5px;line-height:1.4}
+  .tcard .list{gap:8px}
+  .tcard .btn{width:100%;padding:15px 24px;font-size:16px}
+  .reviews.packs .pack{flex:0 0 min(330px,78vw);scroll-snap-align:start}
+  .single-card .pack{background:var(--pink-soft)}
+  @media (max-width:760px){.reviews.packs .pack{flex-basis:70vw}.single-card{display:flex;flex-direction:column}.single-card .head-row{display:contents}.single-card .head-row>div:first-child{margin-bottom:22px}.single-card .rev-nav{order:2;justify-content:center;margin-top:4px}.single-card .includes{order:3}}
+  .single-card .includes{background:var(--pink-soft);margin-top:20px}
+  .single-card .head-row .lead{margin-top:12px}
+  .rev-nav{display:flex;gap:10px}
+  @media (max-width:760px){#diplomas .wrap{display:flex;flex-direction:column}#diplomas .head-row{display:contents}#diplomas .head-row>div:first-child{margin-bottom:24px}.dip-nav{order:10;justify-content:center;margin-top:6px}.diplomas figure{flex:0 0 82vw}.diplomas img{width:100%;height:auto;max-width:none}}
+  .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
+  .rev-nav button:disabled{opacity:.35;cursor:default}
+  .rev-nav button:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
   /* ---------- stage gallery ---------- */
   .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
@@ -228,7 +284,7 @@
   /* ---------- how ---------- */
   .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
   .how li{list-style:none;background:var(--pink-soft);border-radius:var(--radius-l);padding:28px;position:relative}
-  .how li::before{counter-increment:s;content:"0" counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--white);-webkit-text-stroke:2px var(--wine);display:block;margin-bottom:16px}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--wine);display:block;margin-bottom:16px}
   .how h3{font-family:var(--head);font-weight:600;font-size:19px;color:var(--wine)}
   .how p{color:var(--muted);margin-top:8px;font-size:15.5px}
   @media (max-width:860px){.how{grid-template-columns:1fr}}
@@ -264,7 +320,7 @@
     .btn{padding:16px 22px;font-size:16px}
     .plan{padding:20px 16px}
     .fact{grid-template-columns:44px 1fr;gap:12px;padding:16px}
-    .fact .ic{width:44px;height:44px;border-radius:13px}
+    .fact .ic{width:44px;height:44px;font-size:28px}
     .fact .ic svg{width:22px;height:22px}
   }
   /* Playfair italic as the accent face */
@@ -274,8 +330,18 @@
   footer .logo b{font-size:22px}
   .brand b{font-size:21px}
   .brand span{font-size:16px}
-  .name-badge b{font-size:28px}
+
   .logo span{font-family:var(--body)}
+  /* mobile: horizontal swipe rows */
+  @media (max-width:760px){
+    .ba,.pains,.steps4{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent}
+    .ba::-webkit-scrollbar,.pains::-webkit-scrollbar,.steps4::-webkit-scrollbar{height:5px}
+    .ba::-webkit-scrollbar-thumb,.pains::-webkit-scrollbar-thumb,.steps4::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+    .ba>figure{flex:0 0 86%;scroll-snap-align:start}
+    .pains>.pain,.steps4>.ap{flex:0 0 78%;scroll-snap-align:start}
+    .steps4{scrollbar-color:var(--pink) transparent}
+    .steps4::-webkit-scrollbar-thumb{background:var(--pink)}
+  }
   /* mobile sticky CTA */
   .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
   .sticky-cta .btn{width:100%;box-shadow:0 16px 30px -10px rgba(86,14,41,.55)}
@@ -296,10 +362,11 @@
     <nav class="nav" aria-label="Меню">
       <a href="#about">Обо мне</a>
       <a href="#prices">Тарифы</a>
+      <a href="#cases">Кейсы</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a href="#" class="brand"><b>Юлия Костюкова</b><span>фитнес-тренер онлайн</span></a>
-    <a href="#contacts" class="btn btn-wine">Записаться</a>
+    <a href="#contacts" class="btn btn-wine">Хочу на ведение!</a>
   </div>
 </header>
 
@@ -329,9 +396,9 @@
         </div>
       </div>
       <div class="hero-photo rv">
-        <div class="photo" data-label="Портрет Юли"><img src="hero-main.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="name-badge"><small>тренировки</small><b>по видео</b><small>или онлайн-созвон</small></div>
-        <div class="float-badge"><b>здоровый подход</b>без диет</div>
+        <div class="photo" data-label="Портрет Юли"><img width="733" height="1100" src="hero-main.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="name-badge">тренировки по видео<br>или онлайн-созвону</div>
+        <div class="float-badge">здоровый подход<br>без диет</div>
       </div>
     </div>
   </div>
@@ -341,27 +408,21 @@
 <section id="about">
   <div class="wrap">
     <div class="card about-grid">
-      <div class="about-photos rv">
-        <div class="photo p1" data-label="Фото в зале"><img src="about-1.jpg" alt="Юля на тренировке" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p2" data-label="Сцена / соревнования"><img src="about-2.jpg" alt="Юля на соревнованиях" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-        <div class="photo p3" data-label="Сцена"><img src="about-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      </div>
       <div class="rv">
-        <span class="kicker">Обо мне</span>
-        <h2>Привет, я <em>Юля</em></h2>
-        <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь своей желанной цели. А моя задача — сделать этот путь понятным, безопасным и комфортным.</p>
+        <h2>Привет, я Юля</h2>
+        <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь желанной цели. Моя задача заключается в том, чтобы сделать этот путь безопасным, понятным и комфортным.</p>
         <p class="lead lead-note">Но важно помнить: результат в большей степени зависит от тебя самой. Нужно быть готовой включаться в работу и выполнять все рекомендации.</p>
         <div class="facts">
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg></div>
+            <div class="ic" aria-hidden="true">🏆</div>
             <div><h3>Спортсменка в бодибилдинге</h3><p>Выступаю на соревнованиях по бодибилдингу и погружаюсь в этот спорт, поэтому сама прохожу путь детального построения тела и знаю, как должны работать нагрузки, восстановление и питание. Я хочу быть примером для своих подопечных, поддержкой и источником знаний.</p></div>
           </div>
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-2M12 10l-4 1-2 3"/></svg></div>
-            <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о стандартах красоты. Организм должен соответствовать нашему образу жизни и облегчать её: давать силу мышцам для работы, прогулок с друзьями и достижений в других активностях и хобби.</p></div>
+            <div class="ic" aria-hidden="true">💃</div>
+            <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о внешней составляющей. Организм должен соответствовать образу жизни и делать обычную жизнь комфортнее: давать силу и энергию, чтобы гулять с друзьями, заниматься другими физическими активностями и заканчивать рабочий день без болей в спине.</p></div>
           </div>
           <div class="fact">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 12h2l1-2 1.5 4 1-2H16"/></svg></div>
+            <div class="ic" aria-hidden="true">🩺</div>
             <div><h3>Высшее медицинское образование</h3><p>Оканчиваю ПСПбГМУ им. академика Павлова, поэтому подход к питанию и тренировкам максимально бережный, грамотный и безопасный.</p></div>
           </div>
         </div>
@@ -375,18 +436,39 @@
   <div class="wrap">
     <div class="head-row rv">
       <div>
-        <span class="kicker" style="background:var(--white)">Мой результат</span>
-        <h2>На <em>сцене</em></h2>
+        <h2>Мой путь</h2>
       </div>
-      <p class="lead" style="color:var(--wine-deep)">Чемпионат Санкт-Петербурга по бодибилдингу — 2026. Путь к форме я знаю не по книжкам, а на своём опыте.</p>
     </div>
-    <div class="stage">
-      <div class="photo rv" data-label="Фото"><img src="stage-1.jpg" alt="Юля на Чемпионате Санкт-Петербурга по бодибилдингу 2026" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-2.jpg" alt="Юля на сцене, позирование" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-3.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
-      <div class="photo rv" data-label="Фото"><img src="stage-4.jpg" alt="Юля на сцене чемпионата" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+    <div class="story rv">
+      <p>Я тренируюсь и изучаю основы фитнеса уже почти 7 лет. Начинала с домашних тренировок, поэтому знаю, что поддерживать хорошую форму и сильное тело можно не только в зале.</p>
+      <p>В зале мне удалось внушительно увеличить мышечные объёмы всего за год. Поэтому я уверена: если очень хочешь хороший результат, нужно быть готовой много работать.</p>
+      <p>Я прошла в жизни стадии и недостатка массы тела, и её избытка. Поэтому на личном опыте знаю, как избавиться от лишнего веса, как набрать мышечную массу и как сделать самое сложное — поддерживать уже хорошую форму. Я помогаю с любыми запросами и целями.</p>
     </div>
-    <p class="credit">Фото: А. Чепурняк · Академия ФББР</p>
+    <div class="ba">
+      <figure class="rv"><img width="1214" height="1000" src="ba-1.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1334" height="1000" src="ba-2.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1214" height="1000" src="ba-3.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1294" height="800" src="ba-4.jpg" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ДИПЛОМЫ ======= -->
+<section id="diplomas">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Мои дипломы</h2></div>
+      <div class="rev-nav dip-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
+    </div>
+    <ul class="edu rv">
+      <li>Стретчинг</li>
+      <li>Принципы работы с осанкой в сагиттальной плоскости</li>
+    </ul>
+    <div class="reviews diplomas" id="dipTrack">
+      <figure class="rv"><img width="1000" height="698" src="cert-4.jpg" alt="Сертификат Национальной академии тренеров «Фитнес-тренер»" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-1.jpg" alt="Сертификат ZHD: биомеханика движений человека" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-2.jpg" alt="Сертификат ZHD: принципы рационального питания" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-3.jpg" alt="Сертификат ZHD: миофасциальные методики в фитнесе" loading="lazy"></figure>
+    </div>
   </div>
 </section>
 
@@ -396,16 +478,15 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <span class="kicker">Это про тебя?</span>
-          <h2>Узнаёшь <em>себя?</em></h2>
+          <h2>Узнаёшь себя?</h2>
         </div>
         <p class="lead">Если откликается хотя бы один пункт — значит, нам точно есть над чем поработать вместе.</p>
       </div>
       <div class="pains">
-        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник — новая жизнь, а через пару недель всё возвращается как было?</p></div>
-        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Не знаешь, какие упражнения делать, сколько подходов и правильная ли техника?</p></div>
-        <div class="pain rv"><div class="num">3</div><h3>Диеты не работают</h3><p>Жёсткие ограничения, срывы и чувство вины, а вес всё равно возвращается?</p></div>
-        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно держать мотивацию одной, когда некому подсказать и поддержать?</p></div>
+        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник начинаешь ходить в зал и пытаешься нормально питаться, а к воскресенью всё уже возвращается как было?</p></div>
+        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Ходишь на дорожке 5 минут, обходишь тренажёры кругами и идёшь домой? Не знаешь, какие упражнения помогут убрать боль в спине, а какие накачают ягодицы?</p></div>
+        <div class="pain rv"><div class="num">3</div><h3>Не знаешь, как питаться</h3><p>Сначала чистишь свой рацион, а потом срываешься на всё, что видишь в холодильнике? Затем винишь себя, и всё по новой?</p></div>
+        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно что-то делать, когда не понимаешь, куда двигаться, тяжело держать дисциплину и никто не поддерживает?</p></div>
       </div>
       <div class="pain-note rv">
         <p>Со мной ты не одна — разберёмся вместе, шаг за шагом.</p>
@@ -420,15 +501,14 @@
   <div class="wrap">
     <div class="approach">
       <div class="rv" style="position:relative;z-index:1">
-        <span class="kicker" style="background:rgba(255,255,255,.12);color:var(--pink)">Мой подход</span>
-        <h2>Почему со мной <em>легко</em></h2>
+        <h2>Почему со мной легко</h2>
         <p class="lead">К каждой я ищу индивидуальный подход, чтобы тебе было комфортно работать и легко идти к своей цели.</p>
       </div>
       <div class="steps4">
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div><h3>Индивидуально</h3><p>Программа под твою цель, уровень, график и самочувствие — никаких шаблонов.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div><h3>Комфортно</h3><p>Со мной не страшно задавать вопросы и ошибаться — идём в твоём темпе.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></div><h3>Слышу тебя</h3><p>Я лояльный тренер: прислушиваюсь к пожеланиям и корректирую план, если что-то не подходит.</p></div>
-        <div class="ap rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>На максимум</h3><p>Помогаю выложиться на все сто и дойти до результата, а не бросить на полпути.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🎯</div><h3>Индивидуально</h3><p>Программа тренировок и питания только под твою цель и особенности организма.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🤍</div><h3>Комфортно</h3><p>Мне всегда можно задать любой вопрос, и я отвечу максимально подробно. Глупых вопросов нет: глупо не задавать их и пытаться решить всё в одиночку.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">👂</div><h3>Слышу тебя</h3><p>Я максимально прислушиваюсь к твоим пожеланиям и корректирую план, если что-то не подходит.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🔥</div><h3>На максимум</h3><p>Помогаю получить наилучший результат и сделать фитнес привычкой, а не бросить на полпути. Но без твоей дисциплины здесь никак.</p></div>
       </div>
     </div>
   </div>
@@ -439,74 +519,66 @@
   <div class="wrap">
     <div class="card">
       <div class="head-row rv">
-        <div>
-          <span class="kicker">Тарифы</span>
-          <h2>Выбери <em>свой</em> формат</h2>
-        </div>
-        <p class="lead">Сопровождение на месяц. Не уверена, что подойдёт? Напиши — подскажу.</p>
+        <div><h2>Тарифы</h2></div>
+        <div class="rev-nav"><button type="button" id="tarPrev" aria-label="Предыдущий тариф">←</button><button type="button" id="tarNext" aria-label="Следующий тариф">→</button></div>
       </div>
-
-      <div class="featured rv">
-        <div>
-          <span class="ribbon">★ Максимум результата</span>
-          <h3>Полное <em>сопровождение</em></h3>
-          <ul class="list">
-            <li>8 онлайн-тренировок со мной в месяц</li>
-            <li>Контроль питания</li>
-            <li>Программа под твою цель и уровень</li>
-            <li>Я рядом на каждом этапе пути</li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <div class="price">15 000 ₽<small> / мес</small></div>
-          <p>Самый быстрый путь к цели</p>
-          <a href="#contacts" class="btn btn-blue">Хочу этот тариф</a>
-        </div>
-      </div>
-
-      <div class="plans">
-        <div class="plan pink rv">
-          <span class="tag">Питание + тренировки</span>
-          <h3>Тренировки по видео и питание</h3>
-          <div class="opts">
-            <div class="opt"><span>3–5 раз в неделю<small>питание + тренировки по видео</small></span><b>11 000 ₽<i>/мес</i></b></div>
-            <div class="opt"><span>1–2 раза в неделю<small>питание + тренировки по видео</small></span><b>9 000 ₽<i>/мес</i></b></div>
-          </div>
-          <a href="#contacts" class="btn btn-wine">Выбрать</a>
-        </div>
-        <div class="plan blue rv">
-          <span class="tag">Только тренировки</span>
-          <h3>Тренировочный план</h3>
-          <div class="opts">
-            <div class="opt"><span>3+ раза в неделю<small>несколько тренировочных планов</small></span><b>9 000 ₽<i>/мес</i></b></div>
-            <div class="opt"><span>1–2 раза в неделю<small>тренировочный план</small></span><b>6 000 ₽<i>/мес</i></b></div>
-          </div>
-          <a href="#contacts" class="btn btn-wine">Выбрать</a>
-        </div>
-      </div>
-
-      <div class="nutri rv">
-        <div>
-          <span class="ribbon">Только питание</span>
-          <h3>Консультация <em>по питанию</em></h3>
-          <ul class="list two">
-            <li>Консультация 1–1,5 часа: все основы спортивной нутрициологии</li>
-            <li>Индивидуальный расчёт КБЖУ под любую цель</li>
-            <li>Как худеть только благодаря питанию</li>
-            <li>Как поддерживать форму и набирать мышечную массу</li>
-            <li>Знания и подход, которые пригодятся на всю жизнь</li>
-            <li>Вопрос/ответ в режиме онлайн</li>
-            <li>Telegram-канал с полезными ссылками и видео по нутрициологии</li>
-            <li>Поддержка 24/7 в питании и мотивации</li>
-            <li>Помощь в составлении продуктовой корзины и рационов</li>
-            <li>Помощь в выборе блюд в доставке</li>
-            <li>Ежедневная проверка рационов</li>
-          </ul>
-        </div>
-        <div class="price-box">
+      <p class="tariff-note rv">*Если не знаешь, какой тариф выбрать, напиши мне об этом, и я тебя сориентирую.</p>
+      <div class="reviews tariffs" id="tarTrack">
+        <div class="tcard">
+          <div class="hd"><h3>Питание</h3>
+          <p class="sub">только питание: лекция + проверка рационов</p></div>
+          <div class="bd">
           <div class="price">5 000 ₽</div>
-          <p>Питание без жёстких запретов</p>
+          <ul class="list"><li>Лекция в формате видео (2 ч) со всеми основами спортивной нутрициологии: как худеть только благодаря питанию, как поддерживать форму и набирать мышечную массу + многое другое</li><li>Telegram-канал с полезной информацией и ссылками</li><li>Помощь в составлении рациона, продуктовой корзины и выборе блюд в доставке</li><li>Ежедневная проверка рационов и обратная связь</li><li>Знания и подход, которые пригодятся на всю жизнь</li><li>Подойдёт под любые ограничения: вегетарианство, веганство, врачебные рекомендации</li></ul>
           <a href="#contacts" class="btn btn-wine">Записаться</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Старт</h3>
+          <p class="sub">только тренировки: 1–2 тренировочных плана</p></div>
+          <div class="bd">
+          <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
+          <div class="price">6 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>1–2 тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно)</li><li>Одна онлайн-тренировка на 1,5–2 часа для каждого плана: постановка техники и подробный разбор плана</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 1–2 раза в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Прогресс</h3>
+          <p class="sub">только тренировки: 3+ тренировочных плана</p></div>
+          <div class="bd">
+          <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>3+ тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно / разные мышечные группы в зависимости от цели)</li><li>Одна онлайн-тренировка на 1,5–2 часа для каждого плана: постановка техники и подробный разбор плана</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 3–5 раз в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Баланс</h3>
+          <p class="sub">питание + тренировки 1–2 раза в неделю</p></div>
+          <div class="bd">
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Всё, что входит в тариф «Питание»</li><li>Всё, что входит в тариф «Старт»</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Форма</h3>
+          <p class="sub">питание + тренировки 3–5 раз в неделю</p></div>
+          <div class="bd">
+          <div class="price">11 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Всё, что входит в тариф «Питание»</li><li>Всё, что входит в тариф «Прогресс»</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard top">
+          <div class="hd"><h3>Максимум</h3>
+          <p class="sub">полное сопровождение: 8 онлайн-тренировок со мной + питание</p></div>
+          <div class="bd">
+          <div class="price">15 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>8 онлайн-тренировок со мной в месяц</li><li>Всё, что входит в тариф «Питание»</li><li>По желанию: от 1 до 5 тренировочных планов + их проверка по видео</li><li>Обратная связь каждый день</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Хочу этот тариф</a>
+          </div>
         </div>
       </div>
     </div>
@@ -516,27 +588,27 @@
 <!-- ======= РАЗОВЫЕ ТРЕНИРОВКИ ======= -->
 <section id="single">
   <div class="wrap">
+    <div class="card single-card">
     <div class="head-row rv">
       <div>
-        <span class="kicker" style="background:var(--white)">Персональные тренировки</span>
-        <h2>Тренировки <em>со мной</em></h2>
+        <h2>Тренировки со мной по онлайн-созвону</h2>
+        <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
       </div>
-      <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
+      <div class="rev-nav"><button type="button" id="packPrev" aria-label="Предыдущий пакет">←</button><button type="button" id="packNext" aria-label="Следующий пакет">→</button></div>
     </div>
-    <div class="packs">
+    <div class="reviews packs" id="packTrack">
       <div class="pack rv">
         <div class="count">1</div>
         <div class="what">тренировка</div>
         <div class="price">1 700 ₽</div>
         <div class="per">чтобы познакомиться</div>
-        <a href="#contacts" class="btn btn-blue">Записаться</a>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
       </div>
-      <div class="pack best rv">
-        <span class="badge">Выгодно</span>
+      <div class="pack rv">
         <div class="count">5</div>
         <div class="what">тренировок</div>
-        <div class="price">7 000 ₽</div>
-        <div class="per">1 400 ₽ за тренировку</div>
+        <div class="price">8 000 ₽</div>
+        <div class="per">1 600 ₽ за тренировку</div>
         <a href="#contacts" class="btn btn-wine">Записаться</a>
       </div>
       <div class="pack rv">
@@ -544,22 +616,68 @@
         <div class="what">тренировок</div>
         <div class="price">15 000 ₽</div>
         <div class="per">1 500 ₽ за тренировку</div>
-        <a href="#contacts" class="btn btn-blue">Записаться</a>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
       </div>
     </div>
     <div class="includes rv">
       <div>
-        <h3>Что входит в <em>онлайн-тренировку</em></h3>
-        <div class="meta"><span>⏱ 1,5–2 часа</span><span>🏠 дома или в зале</span></div>
+        <h3>Что входит в онлайн-тренировку</h3>
+        <div class="meta"><span>⏱ первая — 1,5–2 часа</span><span>⏱ обычная — 1–1,5 часа</span><span>🏠 дома или в зале</span></div>
       </div>
       <ul class="list two">
         <li>Личный тренировочный план</li>
         <li>Подробное объяснение техники онлайн</li>
         <li>Постановка техники</li>
         <li>Можно заниматься дома или в зале</li>
+        <li>Первая тренировка 1,5–2 часа — максимально подробно разбираем технику</li>
+        <li>Обычная тренировка 1–1,5 часа, когда технику уже знаем</li>
         <li>Основы разминки и заминки</li>
         <li>Индивидуальный расчёт КБЖУ для достижения целей</li>
       </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КЕЙСЫ ======= -->
+<section id="cases">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Кейсы</h2></div>
+      <div class="rev-nav"><button type="button" id="casePrev" aria-label="Предыдущий кейс">←</button><button type="button" id="caseNext" aria-label="Следующий кейс">→</button></div>
+    </div>
+    <div class="reviews cases" id="casesTrack">
+      <figure class="rv"><img width="1094" height="900" src="case-1.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-2.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1290" height="770" src="case-3.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1290" height="770" src="case-4.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1134" height="860" src="case-5.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1174" height="830" src="case-6.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-7.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="966" height="1000" src="case-8.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-9.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1100" height="807" src="case-10.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="819" height="1205" src="case-11.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="720" height="1015" src="case-12.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-13.jpg" alt="Результат ученицы до и после — спереди, 3 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-14.jpg" alt="Результат ученицы до и после — со спины, 3 месяца" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ОТЗЫВЫ ======= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Отзывы</h2></div>
+      <div class="rev-nav"><button type="button" id="revPrev" aria-label="Предыдущий отзыв">←</button><button type="button" id="revNext" aria-label="Следующий отзыв">→</button></div>
+    </div>
+    <div class="reviews" id="reviewsTrack">
+      <figure class="rv"><img width="800" height="1336" src="review-1.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="1063" src="review-2.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="740" src="review-3.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="1858" src="review-4.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="471" src="review-7.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="218" src="review-5.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="354" src="review-6.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -570,14 +688,13 @@
     <div class="card">
       <div class="head-row rv">
         <div>
-          <span class="kicker">Как начать</span>
-          <h2>Всего <em>3 шага</em></h2>
+          <h2>Всего 3 шага, чтобы начать</h2>
         </div>
       </div>
       <ol class="how">
-        <li class="rv"><h3>Напиши мне</h3><p>В любом удобном мессенджере — расскажи о себе и своей цели.</p></li>
-        <li class="rv"><h3>Знакомимся</h3><p>Обсудим твой уровень, образ жизни, пожелания и подберём формат.</p></li>
-        <li class="rv"><h3>Начинаем</h3><p>Получаешь персональный план и идёшь к цели — а я рядом.</p></li>
+        <li class="rv"><h3>Напиши мне в Telegram</h3><p>Расскажи о себе и своей цели.</p></li>
+        <li class="rv"><h3>Выбери тариф</h3><p>Выбери тариф, или вместе обсудим, какой формат будет для тебя самым удобным.</p></li>
+        <li class="rv"><h3>Начинаем</h3><p>Оплачиваешь, получаешь персональный план, и мы начинаем строить тело мечты.</p></li>
       </ol>
     </div>
   </div>
@@ -588,26 +705,17 @@
   <div class="wrap">
     <div class="contact">
       <div class="rv">
-        <span class="kicker" style="background:rgba(255,255,255,.7)">Контакты</span>
-        <h2>Жду <em>тебя!</em></h2>
-        <p class="lead">Напиши мне любым удобным способом — отвечу на вопросы и подскажу, какой формат подойдёт именно тебе.</p>
+        <h2>Жду тебя!</h2>
+        <p class="lead">Чтобы связаться со мной и начать работу, напиши мне в Telegram.</p>
       </div>
       <div class="socials rv">
         <a class="soc" data-contact="telegram" href="#contacts" target="_blank" rel="noopener">
           <span class="si tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.2L2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.8-1.3-1.5zM9.4 14.3l9-5.7c.4-.3.8-.1.5.2l-7.5 6.8-.3 3.2-1.7-4.5z"/></svg></span>
           <span>Telegram<small data-handle="telegram">ник скоро</small></span>
         </a>
-        <a class="soc" data-contact="whatsapp" href="#contacts" target="_blank" rel="noopener">
-          <span class="si wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></span>
-          <span>WhatsApp<small data-handle="whatsapp">номер скоро</small></span>
-        </a>
         <a class="soc" data-contact="instagram" href="#contacts" target="_blank" rel="noopener">
           <span class="si ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
           <span>Instagram*<small data-handle="instagram">ник скоро</small></span>
-        </a>
-        <a class="soc" data-contact="vk" href="#contacts" target="_blank" rel="noopener">
-          <span class="si vk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.4 7.3 4.2 7.7V6.3h2.9v4.4c1.8-.2 3.7-2.2 4.3-4.4h2.9a8.7 8.7 0 01-3.9 5.6 9 9 0 014.6 5.6h-3.2a5.6 5.6 0 00-4.7-4v4h-.4z"/></svg></span>
-          <span>ВКонтакте<small data-handle="vk">ссылка скоро</small></span>
         </a>
       </div>
     </div>
@@ -624,7 +732,7 @@
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#contacts" class="btn btn-wine">Записаться на тренировку</a></div>
+<div class="sticky-cta"><a href="#contacts" class="btn btn-wine">Хочу на ведение!</a></div>
 
 <script>
   /* ====== КОНТАКТЫ: впиши свои данные сюда ======
@@ -655,6 +763,30 @@
   }
   /* незаполненные контакты скрываются */
   document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
+
+  /* листание отзывов */
+  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext'],['dipTrack','dipPrev','dipNext'],['tarTrack','tarPrev','tarNext'],['packTrack','packPrev','packNext']].forEach(function(ids){
+    const t=document.getElementById(ids[0]), pr=document.getElementById(ids[1]), nx=document.getElementById(ids[2]);
+    if(!t||!pr||!nx) return;
+    const step=()=>{const f=t.firstElementChild; const g=parseFloat(getComputedStyle(t).columnGap)||16; return f? f.getBoundingClientRect().width+g : 300};
+    const upd=()=>{pr.disabled=t.scrollLeft<=4; nx.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4; pr.parentElement.style.display=(t.scrollWidth<=t.clientWidth+4)?'none':''};
+    pr.addEventListener('click',()=>t.scrollBy({left:-step(),behavior:'smooth'}));
+    nx.addEventListener('click',()=>t.scrollBy({left:step(),behavior:'smooth'}));
+    t.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+  });
+
+  /* точный переход по пунктам меню: подправляем позицию после подгрузки картинок */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    const id=a.getAttribute('href'); if(id.length<2) return;
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(id); if(!t) return;
+      e.preventDefault();
+      document.querySelectorAll('img[loading="lazy"]').forEach(i=>i.loading='eager');
+      const go=(b)=>{const top=t.getBoundingClientRect().top+window.scrollY-(document.querySelector('.top')?.offsetHeight||90)-16; window.scrollTo({top,behavior:b});};
+      go('smooth'); setTimeout(()=>go('smooth'),700); setTimeout(()=>go('auto'),1400);
+      history.replaceState(null,'',id);
+    });
+  });
 
   /* плавное появление блоков */
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
