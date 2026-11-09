@@ -238,7 +238,7 @@
   .reviews::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
   .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
   .reviews img{width:100%;height:auto;border-radius:16px;display:block}
-  .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
+  .cases figure,.reviews figure.wide{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
   .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
   .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
   .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:12px;margin:0 0 20px}
@@ -646,22 +646,21 @@
       <div class="rev-nav"><button type="button" id="casePrev" aria-label="Предыдущий кейс">←</button><button type="button" id="caseNext" aria-label="Следующий кейс">→</button></div>
     </div>
     <div class="reviews cases" id="casesTrack">
-      <figure class="rv"><img width="1094" height="900" src="case-1.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1094" height="900" src="case-2.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1290" height="770" src="case-3.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1290" height="770" src="case-4.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1134" height="860" src="case-5.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1174" height="830" src="case-6.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1094" height="900" src="case-7.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="966" height="1000" src="case-8.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
-      <figure class="rv"><img width="1094" height="900" src="case-9.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1262" height="572" src="case-16.jpg" alt="Результат ученицы до и после — спереди, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1230" height="730" src="case-15.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
       <figure class="rv"><img width="1100" height="807" src="case-10.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
       <figure class="rv"><img width="819" height="1205" src="case-11.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
       <figure class="rv"><img width="720" height="1015" src="case-12.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-7.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="966" height="1000" src="case-8.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-9.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-1.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-2.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1290" height="770" src="case-3.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1134" height="860" src="case-5.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1174" height="830" src="case-6.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
       <figure class="rv"><img width="1094" height="900" src="case-13.jpg" alt="Результат ученицы до и после — спереди, 3 месяца" loading="lazy"></figure>
       <figure class="rv"><img width="1094" height="900" src="case-14.jpg" alt="Результат ученицы до и после — со спины, 3 месяца" loading="lazy"></figure>
-      <figure class="rv"><img width="1262" height="572" src="case-16.jpg" alt="Результат ученицы до и после — спереди, 2 месяца" loading="lazy"></figure>
-      <figure class="rv"><img width="1230" height="730" src="case-15.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -681,6 +680,14 @@
       <figure class="rv"><img width="800" height="218" src="review-5.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img width="800" height="354" src="review-6.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img width="800" height="993" src="review-8.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-17.jpg" alt="Результат ученицы до и после — спереди, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-18.jpg" alt="Результат ученицы до и после — со спины, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-19.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-20.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1216" src="case-21.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="853" src="case-22.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-23.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-24.jpg" alt="Результат ученицы до и после — плечи и шея, 2 месяца" loading="lazy"></figure>
     </div>
   </div>
 </section>
