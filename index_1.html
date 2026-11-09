@@ -238,7 +238,7 @@
   .reviews::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
   .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
   .reviews img{width:100%;height:auto;border-radius:16px;display:block}
-  .cases figure{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
+  .cases figure,.reviews figure.wide{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
   .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
   .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
   .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:12px;margin:0 0 20px}
@@ -539,7 +539,7 @@
           <div class="bd">
           <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
           <div class="price">6 000 ₽<small> / мес</small></div>
-          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>1–2 тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно)</li><li>Одна онлайн-тренировка на 1,5–2 часа для каждого плана: постановка техники и подробный разбор плана</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 1–2 раза в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>1–2 тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно)</li><li>Одна онлайн-тренировка на 1,5–2 часа для нового плана, постановка техники и подробный разбор упражнений</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 1–2 раза в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
           <a href="#contacts" class="btn btn-wine">Выбрать</a>
           </div>
         </div>
@@ -549,7 +549,7 @@
           <div class="bd">
           <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
           <div class="price">9 000 ₽<small> / мес</small></div>
-          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>3+ тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно / разные мышечные группы в зависимости от цели)</li><li>Одна онлайн-тренировка на 1,5–2 часа для каждого плана: постановка техники и подробный разбор плана</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 3–5 раз в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>3+ тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно / разные мышечные группы в зависимости от цели)</li><li>2 онлайн-тренировки, постановка техники и подробный разбор упражнений</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 3–5 раз в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
           <a href="#contacts" class="btn btn-wine">Выбрать</a>
           </div>
         </div>
@@ -660,6 +660,8 @@
       <figure class="rv"><img width="720" height="1015" src="case-12.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
       <figure class="rv"><img width="1094" height="900" src="case-13.jpg" alt="Результат ученицы до и после — спереди, 3 месяца" loading="lazy"></figure>
       <figure class="rv"><img width="1094" height="900" src="case-14.jpg" alt="Результат ученицы до и после — со спины, 3 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1262" height="572" src="case-16.jpg" alt="Результат ученицы до и после — спереди, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1230" height="730" src="case-15.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -678,6 +680,15 @@
       <figure class="rv"><img width="800" height="471" src="review-7.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img width="800" height="218" src="review-5.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
       <figure class="rv"><img width="800" height="354" src="review-6.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="993" src="review-8.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-17.jpg" alt="Результат ученицы до и после — спереди, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-18.jpg" alt="Результат ученицы до и после — со спины, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1094" height="720" src="case-19.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-20.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1216" src="case-21.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="853" src="case-22.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-23.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv wide"><img width="1280" height="1280" src="case-24.jpg" alt="Результат ученицы до и после — плечи и шея, 2 месяца" loading="lazy"></figure>
     </div>
   </div>
 </section>
