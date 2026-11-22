@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Юлия Костюкова — фитнес-тренер онлайн</title>
+<meta name="description" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta property="og:title" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta property="og:description" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta property="og:site_name" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:description" content="Юлия Костюкова — фитнес-тренер онлайн">
+<meta name="twitter:image" content="https://yuliakossst.ru/og.jpg">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yuliakossst.ru/og.jpg">
+<meta property="og:url" content="https://yuliakossst.ru/">
+<meta name="author" content="Юлия Костюкова">
+<meta name="theme-color" content="#F3C6D3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237B1A3E'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' fill='%23F3C6D3' text-anchor='middle'%3E%D0%AE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#F3C6D3;
+    --pink-2:#F8D9E3;
+    --pink-soft:#FCEEF3;
+    --blue:#C6E2F5;
+    --blue-2:#9CCBEB;
+    --wine:#7B1A3E;
+    --wine-deep:#560E29;
+    --ink:#2E1A23;
+    --muted:#7A5A67;
+    --white:#fff;
+    --radius-xl:40px;
+    --radius-l:28px;
+    --radius-m:20px;
+    --shadow:0 18px 40px -18px rgba(123,26,62,.28);
+    --shadow-blue:0 18px 34px -16px rgba(60,130,190,.45);
+    --head:"Playfair Display", Georgia, "Times New Roman", serif;
+    --script:"Playfair Display", Georgia, "Times New Roman", serif;
+    --body:"Manrope", "Segoe UI", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:110px}
+  body{font-family:var(--body);color:var(--ink);background:var(--pink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+  /* ---------- header ---------- */
+  .top{position:sticky;top:0;z-index:50;padding:12px 0;background:rgba(243,198,211,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+  .top .nav{justify-self:start}
+  .top .btn{justify-self:end}
+  .brand{grid-column:2;text-align:center;color:var(--wine);line-height:1.1}
+  .brand b{display:block;font-family:var(--head);font-weight:800;font-size:19px;letter-spacing:.01em}
+  .brand span{display:block;font-family:var(--script);font-size:20px;margin-top:2px}
+  .logo{display:flex;align-items:baseline;gap:10px;color:var(--wine)}
+  .logo b{font-family:var(--script);font-weight:400;font-size:38px;line-height:1}
+  .logo span{font-family:var(--head);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .nav{display:flex;gap:6px;background:rgba(255,255,255,.55);padding:6px;border-radius:999px}
+  .nav a{white-space:nowrap;font-weight:600;font-size:14.5px;color:var(--wine);padding:9px 16px;border-radius:999px;transition:background .2s}
+  .nav a:hover{background:var(--white)}
+  .top .btn{padding:12px 22px;font-size:15px}
+  @media (max-width:1000px){.nav{display:none}}
+  @media (max-width:560px){.top .btn{display:none}}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:800;font-size:17px;padding:18px 32px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s, box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-blue{background:linear-gradient(180deg,#D8EDFB 0%,var(--blue-2) 100%);color:var(--wine-deep);box-shadow:var(--shadow-blue), inset 0 2px 0 rgba(255,255,255,.8)}
+  .btn-wine{background:var(--wine);color:var(--white);box-shadow:var(--shadow)}
+  .btn-ghost{background:rgba(255,255,255,.7);color:var(--wine)}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* ---------- common ---------- */
+  section{padding:28px 0}
+  @media (min-width:900px){section{padding:36px 0}}
+  .card{background:var(--white);border-radius:var(--radius-xl);padding:clamp(28px,5vw,64px)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);background:var(--pink-soft);padding:8px 14px;border-radius:999px}
+  .kicker::before{content:"";width:8px;height:8px;border-radius:3px;background:currentColor}
+  h2{font-family:var(--head);font-weight:800;color:var(--wine);font-size:clamp(32px,5.4vw,64px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 0}
+  h2 em{font-family:var(--script);font-style:normal;font-weight:400;font-size:1.05em;letter-spacing:0;display:inline-block;transform:translateY(.06em)}
+  .lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:620px;margin-top:18px}
+  .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+  .head-row .lead{margin-top:0;max-width:440px}
+
+  /* photo slots: if *.jpg missing — graceful placeholder */
+  .photo{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--pink-2),var(--blue) 120%)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .photo.empty::after{content:attr(data-label);position:absolute;inset:auto 0 0 0;padding:16px;text-align:center;font-weight:700;font-size:14px;color:var(--wine);opacity:.7}
+  .photo.empty::before{content:"";position:absolute;left:50%;top:46%;width:64px;height:64px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237B1A3E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8h3l2-3h6l2 3h3v11H4z'/%3E%3Ccircle cx='12' cy='13' r='3.5'/%3E%3C/svg%3E") center/30px no-repeat}
+
+  /* ---------- hero ---------- */
+  .hero{padding:16px 0 40px}
+  .hero-card{position:relative;border-radius:var(--radius-xl);background:
+      radial-gradient(60% 70% at 85% 20%, rgba(255,255,255,.75), transparent 60%),
+      radial-gradient(50% 60% at 10% 100%, rgba(198,226,245,.9), transparent 70%),
+      linear-gradient(160deg,#FBE3EB 0%,#F5C9D6 55%,#EFB7C8 100%);
+    padding:clamp(28px,5vw,64px);overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;min-height:640px}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;max-width:520px;line-height:1.35;font-weight:700;color:var(--wine);background:rgba(255,255,255,.6);padding:9px 16px;border-radius:999px;font-size:15px}
+  .dot{flex:none;width:9px;height:9px;border-radius:50%;background:#3FBF6A;box-shadow:0 0 0 4px rgba(63,191,106,.2)}
+  .hero h1{margin:26px 0 0;line-height:.88}
+  .hero h1 .big{display:block;font-family:var(--head);font-weight:900;font-size:clamp(46px,8vw,112px);letter-spacing:-.01em;color:var(--white);text-shadow:0 10px 40px rgba(123,26,62,.18)}
+  .hero h1 .script{display:block;font-family:var(--script);font-weight:400;color:var(--wine);font-size:clamp(40px,6.4vw,88px);line-height:1;margin-top:.06em;padding-left:.3em;letter-spacing:0}
+  .hero p.sub{margin-top:26px;font-size:clamp(17px,1.6vw,21px);max-width:520px;color:var(--wine-deep)}
+  .hero p.sub b{font-weight:800}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .chip{background:var(--white);color:var(--wine);font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px;box-shadow:0 8px 20px -14px rgba(123,26,62,.5)}
+  .hero-photo{position:relative;justify-self:center;width:min(100%,470px)}
+  .hero-photo .photo img{object-position:center 18%}
+  .hero-photo .photo{aspect-ratio:2/3;border-radius:220px 220px 36px 36px;box-shadow:0 40px 70px -30px rgba(86,14,41,.45);border:8px solid rgba(255,255,255,.65)}
+  .name-badge,.float-badge{position:absolute;color:var(--wine);background:rgba(255,252,253,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:16px;padding:10px 14px;font-family:var(--body);font-weight:600;font-size:14px;line-height:1.3}
+  .name-badge{left:18px;bottom:22px}
+  .float-badge{right:18px;top:40px}
+    @media (max-width:900px){
+    .hero-card{grid-template-columns:1fr;min-height:0}
+    .hero-photo{order:-1;width:min(100%,320px)}
+    .hero-cta .btn{flex:1 1 220px}
+    .name-badge{left:14px;bottom:16px}
+    .float-badge{right:14px;top:28px}
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{display:block}
+  @media (min-width:901px){.about-photos{position:sticky;top:110px}}
+  .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about-photos .photo{border-radius:var(--radius-l)}
+  .about-photos .p1{grid-row:span 2;height:100%;min-height:100%}
+  .about-photos .p2,.about-photos .p3{aspect-ratio:1/1.1}
+  .facts{display:grid;gap:14px;margin-top:30px}
+  @media (min-width:901px){.facts{grid-template-columns:repeat(3,1fr)}.facts .fact{grid-template-columns:1fr;gap:6px;padding:22px 24px}.facts .fact .ic{width:auto;height:auto;justify-content:start}}
+  .lead-note{margin-top:12px;font-size:16px;padding:14px 18px;border-left:3px solid var(--wine);background:var(--pink-soft);border-radius:0 14px 14px 0;color:var(--wine-deep)}
+  .fact{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--pink-soft);border-radius:var(--radius-m);padding:18px 20px}
+  .fact .ic{width:56px;height:56px;display:grid;place-items:center;font-size:34px;line-height:1}
+  .fact .ic svg{width:28px;height:28px}
+  .fact h3{font-family:var(--head);font-weight:600;font-size:17px;color:var(--wine);line-height:1.25}
+  .fact p{color:var(--muted);font-size:15.5px;margin-top:4px}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+  /* ---------- pains ---------- */
+  .pains{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pain{background:var(--pink-soft);border-radius:var(--radius-l);padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px}
+  .num{width:44px;height:44px;border-radius:14px;background:var(--white);display:grid;place-items:center;font-family:var(--head);font-weight:800;color:var(--wine);box-shadow:0 8px 16px -10px rgba(123,26,62,.5)}
+  .pain h3{font-family:var(--head);font-weight:600;font-size:19px;line-height:1.2;color:var(--wine);margin-top:6px}
+  .pain p{color:var(--muted);font-size:15.5px}
+  .pain-note{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--blue);border-radius:var(--radius-l);padding:22px 28px}
+  .pain-note p{font-weight:700;font-size:18px;color:var(--wine-deep)}
+  @media (max-width:1000px){.pains{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.pains{grid-template-columns:1fr}}
+
+  /* ---------- approach ---------- */
+  .approach{background:var(--wine);color:var(--white);border-radius:var(--radius-xl);padding:clamp(28px,5vw,64px);position:relative;overflow:hidden}
+  .approach::after{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(243,198,211,.35),transparent 65%)}
+  .approach h2{color:var(--white)}
+  .approach h2 em{color:var(--pink)}
+  .approach .lead{color:rgba(255,255,255,.75)}
+  .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;position:relative;z-index:1}
+  .ap{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-l);padding:26px}
+  .ap .ic{font-size:36px;line-height:1;margin-bottom:16px}
+  .ap .ic svg{width:26px;height:26px}
+  .ap h3{font-family:var(--head);font-weight:600;font-size:18px;line-height:1.25}
+  .ap p{color:rgba(255,255,255,.75);font-size:15.5px;margin-top:8px}
+  @media (max-width:1000px){.steps4{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.steps4{grid-template-columns:1fr}}
+
+  /* ---------- pricing ---------- */
+  .featured{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;background:linear-gradient(150deg,var(--pink-soft),var(--pink-2));border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px);position:relative;overflow:hidden}
+  .ribbon{display:inline-block;background:var(--wine);color:var(--white);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+  .featured h3{font-family:var(--head);font-weight:800;font-size:clamp(28px,3.6vw,44px);color:var(--wine);line-height:1.05;margin-top:18px}
+  .featured h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.2em}
+  .list{list-style:none;display:grid;gap:10px;margin-top:22px}
+  .list li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:var(--wine-deep)}
+  .list li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--wine) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
+  .price-box{background:var(--white);border-radius:var(--radius-l);padding:32px;text-align:center;box-shadow:var(--shadow)}
+  .price{font-family:var(--head);font-weight:800;color:var(--wine);font-size:clamp(40px,5vw,60px);line-height:1;letter-spacing:-.02em}
+  .price small{font-family:var(--body);font-size:17px;font-weight:700;color:var(--muted);letter-spacing:0}
+  .price-box p{color:var(--muted);margin:10px 0 22px;font-size:15px}
+  .price-box .btn{width:100%}
+
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .plan{border-radius:var(--radius-l);padding:28px;display:flex;flex-direction:column}
+  .plan.pink{background:var(--pink-soft)}
+  .plan.blue{background:#E3F1FA}
+  .plan .tag{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .plan h3{font-family:var(--head);font-weight:600;font-size:22px;color:var(--wine);line-height:1.2;margin-top:8px}
+  .opts{display:grid;gap:10px;margin:20px 0 24px;flex:1;align-content:start}
+  .opt{background:var(--white);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+  .opt span{font-weight:600;font-size:15.5px;line-height:1.35}
+  .opt span small{display:block;font-weight:500;color:var(--muted);font-size:13.5px;margin-top:2px}
+  .opt b{font-family:var(--head);font-weight:800;color:var(--wine);font-size:24px;white-space:nowrap;letter-spacing:-.01em}
+  .opt b i{font-style:normal;font-family:var(--body);font-weight:700;font-size:12px;color:var(--muted)}
+  .plan .btn{width:100%;padding:15px 24px;font-size:16px}
+  @media (max-width:760px){.featured{grid-template-columns:1fr}.plans{grid-template-columns:1fr}}
+  .nutri{margin-top:16px;display:grid;grid-template-columns:1.35fr .65fr;gap:32px;align-items:center;background:linear-gradient(150deg,#E3F1FA,var(--blue));border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px)}
+  .nutri .ribbon{background:var(--white);color:var(--wine)}
+  .nutri h3{font-family:var(--head);font-weight:800;font-size:clamp(26px,3.2vw,40px);color:var(--wine);line-height:1.05;margin-top:18px}
+  .nutri h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.2em}
+  .list.two{grid-template-columns:1fr 1fr;column-gap:24px}
+  .list.two li{font-size:15.5px}
+  @media (max-width:860px){.nutri{grid-template-columns:1fr}.list.two{grid-template-columns:1fr}}
+  .includes{margin-top:16px;background:var(--white);border-radius:var(--radius-xl);padding:clamp(26px,4vw,48px);display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center}
+  .includes h3{font-family:var(--head);font-weight:800;font-size:clamp(24px,2.8vw,34px);color:var(--wine);line-height:1.1}
+  .includes h3 em{font-family:var(--script);font-weight:400;font-style:normal;font-size:1.25em}
+  .includes .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .includes .meta span{background:var(--pink-soft);color:var(--wine);font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px}
+  .includes .list{margin-top:0}
+  @media (max-width:860px){.includes{grid-template-columns:1fr}}
+
+  /* ---------- single trainings ---------- */
+
+  .pack{background:var(--white);border-radius:var(--radius-l);padding:30px;text-align:center;position:relative;border:2px solid transparent}
+  .pack.best{border-color:var(--wine)}
+  .pack .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--wine);color:var(--white);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;white-space:nowrap}
+  .pack .count{font-family:var(--head);font-weight:900;font-size:72px;line-height:1;color:var(--pink);-webkit-text-stroke:2px var(--wine)}
+  .pack .what{font-weight:700;color:var(--wine);margin-top:6px}
+  .pack .price{font-size:40px;margin-top:18px}
+    .pack .per{color:var(--muted);font-size:14.5px;margin-top:6px;min-height:22px}
+  .pack .btn{margin-top:22px;width:100%;padding:15px}
+  
+
+  /* ---------- results: story + before/after ---------- */
+  .story{background:var(--white);border-radius:var(--radius-l);padding:clamp(22px,3.4vw,36px);display:grid;gap:12px;max-width:none;font-size:clamp(16px,1.4vw,18px);color:var(--wine-deep)}
+  .story p{max-width:75ch}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .ba figure{background:var(--white);border-radius:var(--radius-l);padding:10px;margin:0}
+  .ba{align-items:center}
+  .ba img{width:100%;height:auto;border-radius:20px}
+  .stage-title{font-family:var(--head);font-weight:700;color:var(--wine);font-size:clamp(18px,2vw,24px);margin:36px 0 16px}
+  @media (max-width:760px){.ba{grid-template-columns:1fr}}
+  /* ---------- reviews ---------- */
+  .reviews-wrap{position:relative}
+  .reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 4px 18px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent;align-items:flex-start}
+  .reviews::-webkit-scrollbar{height:6px}
+  .reviews::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+  .reviews figure{flex:0 0 min(380px,82vw);scroll-snap-align:start;margin:0;background:var(--white);border-radius:var(--radius-l);padding:14px;box-shadow:var(--shadow);max-height:620px;overflow-y:auto}
+  .reviews img{width:100%;height:auto;border-radius:16px;display:block}
+  .cases figure,.reviews figure.wide{flex-basis:min(560px,86vw);max-height:none;overflow:visible}
+  .diplomas figure{flex:0 0 auto;max-height:none;overflow:visible}
+  .diplomas img{height:min(440px,70vw);width:auto;max-width:86vw;object-fit:contain}
+  .edu{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:12px;margin:0 0 20px}
+  .edu li{background:var(--white);border-radius:var(--radius-m);padding:16px 18px 16px 48px;position:relative;font-weight:600;color:var(--wine-deep);font-size:15.5px;line-height:1.4}
+  .edu li::before{content:"🎓";position:absolute;left:16px;top:14px;font-size:20px}
+  .tariff-note{color:var(--muted);font-size:15.5px;margin:-20px 0 22px;max-width:60ch}
+  .tariffs{align-items:flex-start}
+  @media (max-width:640px){.tariffs{padding-left:0;padding-right:0;scroll-padding:0}.tariffs .tcard{flex:0 0 100%;scroll-snap-stop:always}}
+  .tcard{flex:0 0 min(340px,82vw);scroll-snap-align:start;background:var(--pink-soft);border-radius:var(--radius-l);padding:0;overflow:hidden;display:flex;flex-direction:column;gap:0}
+  .tcard.top{background:linear-gradient(150deg,var(--pink-soft),var(--pink-2));outline:2px solid var(--wine);outline-offset:-2px}
+  .tcard .tag{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .tcard h3{font-family:var(--head);font-weight:700;font-size:22px;color:var(--wine);line-height:1.15}
+  .tcard .sub{font-weight:700;font-size:16px;color:var(--wine-deep);margin-top:-6px}
+  .tcard .where{background:var(--pink);color:var(--wine-deep);font-weight:800;font-size:15.5px;line-height:1.4;padding:10px 14px;border-radius:16px}
+  .tcard .hd{background:var(--wine);padding:22px 24px 18px;display:flex;flex-direction:column;gap:6px}
+  .tcard .hd h3{color:#FFFCFD;font-size:34px;line-height:1.05}
+  .tcard .hd .sub{color:var(--pink);margin:0}
+  .tcard .bd{padding:18px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .tcard.top .hd{background:linear-gradient(135deg,#560E29,#9B2A55)}
+  .tcard.top .hd h3::after{content:" 👑"}
+  .tcard .price{font-size:36px}
+  .tcard .list{margin-top:4px;flex:1;align-content:start}
+  .tcard .list li{font-size:14.5px;line-height:1.4}
+  .tcard .list{gap:8px}
+  .tcard .btn{width:100%;padding:15px 24px;font-size:16px}
+  .reviews.packs .pack{flex:0 0 min(330px,78vw);scroll-snap-align:start}
+  .single-card .pack{background:var(--pink-soft)}
+  @media (max-width:760px){.reviews.packs .pack{flex-basis:70vw}.single-card{display:flex;flex-direction:column}.single-card .head-row{display:contents}.single-card .head-row>div:first-child{margin-bottom:22px}.single-card .rev-nav{order:2;justify-content:center;margin-top:4px}.single-card .includes{order:3}}
+  .single-card .includes{background:var(--pink-soft);margin-top:20px}
+  .single-card .head-row .lead{margin-top:12px}
+  .rev-nav{display:flex;gap:10px}
+  @media (max-width:760px){#diplomas .wrap{display:flex;flex-direction:column}#diplomas .head-row{display:contents}#diplomas .head-row>div:first-child{margin-bottom:24px}.dip-nav{order:10;justify-content:center;margin-top:6px}.diplomas figure{flex:0 0 82vw}.diplomas img{width:100%;height:auto;max-width:none}}
+  .rev-nav button{width:52px;height:52px;border-radius:50%;border:0;background:var(--wine);color:var(--white);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:opacity .2s}
+  .rev-nav button:disabled{opacity:.35;cursor:default}
+  .rev-nav button:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
+  /* ---------- stage gallery ---------- */
+  .stage{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .stage .photo{aspect-ratio:2/3;border-radius:var(--radius-l)}
+  .stage .photo img{object-position:center 30%}
+  .credit{margin-top:14px;font-size:13px;color:var(--muted)}
+  @media (max-width:860px){.stage{grid-template-columns:1fr 1fr}}
+
+  /* ---------- how ---------- */
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+  .how li{list-style:none;background:var(--pink-soft);border-radius:var(--radius-l);padding:28px;position:relative}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--head);font-weight:900;font-size:56px;line-height:1;color:var(--wine);display:block;margin-bottom:16px}
+  .how h3{font-family:var(--head);font-weight:600;font-size:19px;color:var(--wine)}
+  .how p{color:var(--muted);margin-top:8px;font-size:15.5px}
+  @media (max-width:860px){.how{grid-template-columns:1fr}}
+
+  /* ---------- contacts ---------- */
+  .contact{background:
+      radial-gradient(60% 80% at 100% 0%, rgba(255,255,255,.6), transparent 60%),
+      linear-gradient(150deg,var(--blue) 0%, #DCEEFA 60%, var(--pink-2) 130%);
+    border-radius:var(--radius-xl);padding:clamp(28px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .contact h2 em{color:var(--wine)}
+  .contact .lead{color:var(--wine-deep);opacity:.8}
+  .socials{display:grid;grid-template-columns:1fr;gap:14px;max-width:440px;width:100%;justify-self:end}
+  .soc{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:22px;padding:18px 20px;font-weight:800;color:var(--wine);box-shadow:0 14px 30px -20px rgba(60,100,150,.6);transition:transform .2s}
+  .soc:hover{transform:translateY(-3px)}
+  .soc .si{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--white);flex:none}
+  .soc .si svg{width:24px;height:24px}
+  .soc small{display:block;font-weight:600;color:var(--muted);font-size:13px}
+  .tg{background:#2AABEE}.wa{background:#25D366}.ig{background:linear-gradient(45deg,#F9A13A,#E1306C 55%,#8A3AB9)}.vk{background:#0077FF}
+  @media (max-width:860px){.contact{grid-template-columns:1fr}}
+  @media (max-width:860px){.socials{justify-self:stretch;max-width:none}}
+
+  footer{padding:36px 0 120px;color:var(--wine-deep);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer .logo b{font-size:32px}
+  footer .note{opacity:.65;font-size:12.5px;max-width:520px}
+  @media (min-width:761px){footer{padding-bottom:40px}}
+
+  @media (max-width:560px){
+    .card,.approach,.contact{padding:24px 18px;border-radius:30px}
+    .featured,.nutri,.includes{padding:22px 16px;border-radius:26px}
+    .price-box{padding:24px 18px}
+    .price small{display:block;margin-top:6px}
+    .btn{padding:16px 22px;font-size:16px}
+    .plan{padding:20px 16px}
+    .fact{grid-template-columns:44px 1fr;gap:12px;padding:16px}
+    .fact .ic{width:44px;height:44px;font-size:28px}
+    .fact .ic svg{width:22px;height:22px}
+  }
+  /* Playfair italic as the accent face */
+  .hero h1 .script, h2 em, .name-badge b, .featured h3 em, .nutri h3 em, .includes h3 em, .logo b, .brand span{font-style:italic;font-weight:500}
+  h2 em, .featured h3 em, .nutri h3 em, .includes h3 em{font-size:1em;transform:none}
+  .logo b{font-size:24px}
+  footer .logo b{font-size:22px}
+  .brand b{font-size:21px}
+  .brand span{font-size:16px}
+
+  .logo span{font-family:var(--body)}
+  /* mobile: horizontal swipe rows */
+  @media (max-width:760px){
+    .ba,.pains,.steps4{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--wine) transparent}
+    .ba::-webkit-scrollbar,.pains::-webkit-scrollbar,.steps4::-webkit-scrollbar{height:5px}
+    .ba::-webkit-scrollbar-thumb,.pains::-webkit-scrollbar-thumb,.steps4::-webkit-scrollbar-thumb{background:var(--wine);border-radius:3px}
+    .ba>figure{flex:0 0 86%;scroll-snap-align:start}
+    .pains>.pain,.steps4>.ap{flex:0 0 78%;scroll-snap-align:start}
+    .steps4{scrollbar-color:var(--pink) transparent}
+    .steps4::-webkit-scrollbar-thumb{background:var(--pink)}
+  }
+  /* mobile sticky CTA */
+  .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
+  .sticky-cta .btn{width:100%;box-shadow:0 16px 30px -10px rgba(86,14,41,.55)}
+  @media (max-width:760px){.sticky-cta{display:block}}
+
+  /* reveal */
+  .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .js .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.btn,.soc{transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- ======= ШАПКА ======= -->
+<header class="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Меню">
+      <a href="#about">Обо мне</a>
+      <a href="#prices">Тарифы</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="#" class="brand"><b>Юлия Костюкова</b><span>фитнес-тренер онлайн</span></a>
+    <a href="#contacts" class="btn btn-wine">Хочу на ведение!</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ======= ПЕРВЫЙ ЭКРАН ======= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="rv">
+        <span class="hero-tag"><span class="dot"></span>Веду набор девушек на онлайн-ведение, которое точно приведёт к цели</span>
+        <h1>
+          <span class="big">СИЛЬНОЕ<br>ТЕЛО</span>
+          <span class="script">в твоём ритме</span>
+        </h1>
+        <p class="sub">Тренировки, питание и поддержка — <b>с индивидуальным подходом к каждой</b>. Помогу дойти до твоей цели так, чтобы тебе было комфортно и легко.</p>
+        <div class="hero-cta">
+          <a href="#contacts" class="btn btn-blue">Хочу тренироваться
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#prices" class="btn btn-ghost">Смотреть тарифы</a>
+        </div>
+        <div class="chips">
+          <span class="chip">🏆 Спортсменка в бодибилдинге</span>
+          <span class="chip">💃 Танцовщица</span>
+          <span class="chip">🩺 Высшее медицинское образование ПСПбГМУ им. Павлова</span>
+        </div>
+      </div>
+      <div class="hero-photo rv">
+        <div class="photo" data-label="Портрет Юли"><img width="733" height="1100" src="hero-main.jpg" alt="Юля — фитнес-тренер" onerror="this.parentElement.classList.add('empty');this.remove()"></div>
+        <div class="name-badge">тренировки по видео<br>или онлайн-созвону</div>
+        <div class="float-badge">здоровый подход<br>без диет</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ОБО МНЕ ======= -->
+<section id="about">
+  <div class="wrap">
+    <div class="card about-grid">
+      <div class="rv">
+        <h2>Привет, я Юля</h2>
+        <p class="lead">Я стараюсь помочь каждой девушке на максимум своих знаний и возможностей, чтобы каждая могла достичь желанной цели. Моя задача заключается в том, чтобы сделать этот путь безопасным, понятным и комфортным.</p>
+        <p class="lead lead-note">Но важно помнить: результат в большей степени зависит от тебя самой. Нужно быть готовой включаться в работу и выполнять все рекомендации.</p>
+        <div class="facts">
+          <div class="fact">
+            <div class="ic" aria-hidden="true">🏆</div>
+            <div><h3>Спортсменка в бодибилдинге</h3><p>Выступаю на соревнованиях по бодибилдингу и погружаюсь в этот спорт, поэтому сама прохожу путь детального построения тела и знаю, как должны работать нагрузки, восстановление и питание. Я хочу быть примером для своих подопечных, поддержкой и источником знаний.</p></div>
+          </div>
+          <div class="fact">
+            <div class="ic" aria-hidden="true">💃</div>
+            <div><h3>Танцовщица</h3><p>Я считаю, что тело должно быть в первую очередь здоровым и функциональным, поэтому важно беспокоиться не только о внешней составляющей. Организм должен соответствовать образу жизни и делать обычную жизнь комфортнее: давать силу и энергию, чтобы гулять с друзьями, заниматься другими физическими активностями и заканчивать рабочий день без болей в спине.</p></div>
+          </div>
+          <div class="fact">
+            <div class="ic" aria-hidden="true">🩺</div>
+            <div><h3>Высшее медицинское образование</h3><p>Оканчиваю ПСПбГМУ им. академика Павлова, поэтому подход к питанию и тренировкам максимально бережный, грамотный и безопасный.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= СЦЕНА ======= -->
+<section id="stage">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div>
+        <h2>Мой путь</h2>
+      </div>
+    </div>
+    <div class="story rv">
+      <p>Я тренируюсь и изучаю основы фитнеса уже почти 7 лет. Начинала с домашних тренировок, поэтому знаю, что поддерживать хорошую форму и сильное тело можно не только в зале.</p>
+      <p>В зале мне удалось внушительно увеличить мышечные объёмы всего за год. Поэтому я уверена: если очень хочешь хороший результат, нужно быть готовой много работать.</p>
+      <p>Я прошла в жизни стадии и недостатка массы тела, и её избытка. Поэтому на личном опыте знаю, как избавиться от лишнего веса, как набрать мышечную массу и как сделать самое сложное — поддерживать уже хорошую форму. Я помогаю с любыми запросами и целями.</p>
+    </div>
+    <div class="ba">
+      <figure class="rv"><img width="1214" height="1000" src="ba-1.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1334" height="1000" src="ba-2.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1214" height="1000" src="ba-3.jpg" alt="" loading="lazy"></figure>
+      <figure class="rv"><img width="1294" height="800" src="ba-4.jpg" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ДИПЛОМЫ ======= -->
+<section id="diplomas">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Мои дипломы</h2></div>
+      <div class="rev-nav dip-nav"><button type="button" id="dipPrev" aria-label="Предыдущий диплом">←</button><button type="button" id="dipNext" aria-label="Следующий диплом">→</button></div>
+    </div>
+    <ul class="edu rv">
+      <li>Стретчинг</li>
+      <li>Принципы работы с осанкой в сагиттальной плоскости</li>
+    </ul>
+    <div class="reviews diplomas" id="dipTrack">
+      <figure class="rv"><img width="1000" height="698" src="cert-4.jpg" alt="Сертификат Национальной академии тренеров «Фитнес-тренер»" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-1.jpg" alt="Сертификат ZHD: биомеханика движений человека" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-2.jpg" alt="Сертификат ZHD: принципы рационального питания" loading="lazy"></figure>
+      <figure class="rv"><img width="990" height="1400" src="cert-3.jpg" alt="Сертификат ZHD: миофасциальные методики в фитнесе" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= УЗНАЁШЬ СЕБЯ ======= -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div>
+          <h2>Узнаёшь себя?</h2>
+        </div>
+        <p class="lead">Если откликается хотя бы один пункт — значит, нам точно есть над чем поработать вместе.</p>
+      </div>
+      <div class="pains">
+        <div class="pain rv"><div class="num">1</div><h3>Начинаешь и бросаешь</h3><p>Каждый понедельник начинаешь ходить в зал и пытаешься нормально питаться, а к воскресенью всё уже возвращается как было?</p></div>
+        <div class="pain rv"><div class="num">2</div><h3>Теряешься в зале</h3><p>Ходишь на дорожке 5 минут, обходишь тренажёры кругами и идёшь домой? Не знаешь, какие упражнения помогут убрать боль в спине, а какие накачают ягодицы?</p></div>
+        <div class="pain rv"><div class="num">3</div><h3>Не знаешь, как питаться</h3><p>Сначала чистишь свой рацион, а потом срываешься на всё, что видишь в холодильнике? Затем винишь себя, и всё по новой?</p></div>
+        <div class="pain rv"><div class="num">4</div><h3>Не хватает поддержки</h3><p>Сложно что-то делать, когда не понимаешь, куда двигаться, тяжело держать дисциплину и никто не поддерживает?</p></div>
+      </div>
+      <div class="pain-note rv">
+        <p>Со мной ты не одна — разберёмся вместе, шаг за шагом.</p>
+        <a href="#prices" class="btn btn-wine">Выбрать формат</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ПОДХОД ======= -->
+<section id="approach">
+  <div class="wrap">
+    <div class="approach">
+      <div class="rv" style="position:relative;z-index:1">
+        <h2>Почему со мной легко</h2>
+        <p class="lead">К каждой я ищу индивидуальный подход, чтобы тебе было комфортно работать и легко идти к своей цели.</p>
+      </div>
+      <div class="steps4">
+        <div class="ap rv"><div class="ic" aria-hidden="true">🎯</div><h3>Индивидуально</h3><p>Программа тренировок и питания только под твою цель и особенности организма.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🤍</div><h3>Комфортно</h3><p>Мне всегда можно задать любой вопрос, и я отвечу максимально подробно. Глупых вопросов нет: глупо не задавать их и пытаться решить всё в одиночку.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">👂</div><h3>Слышу тебя</h3><p>Я максимально прислушиваюсь к твоим пожеланиям и корректирую план, если что-то не подходит.</p></div>
+        <div class="ap rv"><div class="ic" aria-hidden="true">🔥</div><h3>На максимум</h3><p>Помогаю получить наилучший результат и сделать фитнес привычкой, а не бросить на полпути. Но без твоей дисциплины здесь никак.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ТАРИФЫ ======= -->
+<section id="prices">
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div><h2>Тарифы</h2></div>
+        <div class="rev-nav"><button type="button" id="tarPrev" aria-label="Предыдущий тариф">←</button><button type="button" id="tarNext" aria-label="Следующий тариф">→</button></div>
+      </div>
+      <p class="tariff-note rv">*Если не знаешь, какой тариф выбрать, напиши мне об этом, и я тебя сориентирую.</p>
+      <div class="reviews tariffs" id="tarTrack">
+        <div class="tcard">
+          <div class="hd"><h3>Питание</h3>
+          <p class="sub">только питание: лекция + проверка рационов</p></div>
+          <div class="bd">
+          <div class="price">5 000 ₽</div>
+          <ul class="list"><li>Лекция в формате видео (2 ч) со всеми основами спортивной нутрициологии: как худеть только благодаря питанию, как поддерживать форму и набирать мышечную массу + многое другое</li><li>Telegram-канал с полезной информацией и ссылками</li><li>Помощь в составлении рациона, продуктовой корзины и выборе блюд в доставке</li><li>Ежедневная проверка рационов и обратная связь</li><li>Знания и подход, которые пригодятся на всю жизнь</li><li>Подойдёт под любые ограничения: вегетарианство, веганство, врачебные рекомендации</li></ul>
+          <a href="#contacts" class="btn btn-wine">Записаться</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Старт</h3>
+          <p class="sub">только тренировки: 1–2 тренировочных плана</p></div>
+          <div class="bd">
+          <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
+          <div class="price">6 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>1–2 тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно)</li><li>Одна онлайн-тренировка на 1,5–2 часа для нового плана, постановка техники и подробный разбор упражнений</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 1–2 раза в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Прогресс</h3>
+          <p class="sub">только тренировки: 3+ тренировочных плана</p></div>
+          <div class="bd">
+          <p class="where">🏠🏋️‍♀️ Можно как дома (если есть гантели/штанга), так и в зале</p>
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Помощь в определении цели и её достижении</li><li>3+ тренировочных плана для формы мечты (фулбади — всё тело сразу / сплит — верх и низ отдельно / разные мышечные группы в зависимости от цели)</li><li>2 онлайн-тренировки, постановка техники и подробный разбор упражнений</li><li>Видеоразбор техники каждого упражнения</li><li>Отчёты по тренировкам: видео каждого упражнения, минимум одного подхода</li><li>Обратная связь по каждой тренировке 3–5 раз в неделю: комментарии и рекомендации для идеальной техники</li><li>Комментарии всеми способами: текст, видео, картинки, доп. видео, голосовые</li><li>Контроль техники и прогрессии нагрузок</li><li>План в Google-таблице с дневником рабочих весов</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Баланс</h3>
+          <p class="sub">питание + тренировки 1–2 раза в неделю</p></div>
+          <div class="bd">
+          <div class="price">9 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Всё, что входит в тариф «Питание»</li><li>Всё, что входит в тариф «Старт»</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="hd"><h3>Форма</h3>
+          <p class="sub">питание + тренировки 3–5 раз в неделю</p></div>
+          <div class="bd">
+          <div class="price">11 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>Всё, что входит в тариф «Питание»</li><li>Всё, что входит в тариф «Прогресс»</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Выбрать</a>
+          </div>
+        </div>
+        <div class="tcard top">
+          <div class="hd"><h3>Максимум</h3>
+          <p class="sub">полное сопровождение: 8 онлайн-тренировок со мной + питание</p></div>
+          <div class="bd">
+          <div class="price">15 000 ₽<small> / мес</small></div>
+          <ul class="list"><li>8 онлайн-тренировок со мной в месяц</li><li>Всё, что входит в тариф «Питание»</li><li>По желанию: от 1 до 5 тренировочных планов + их проверка по видео</li><li>Обратная связь каждый день</li><li>Групповая онлайн-тренировка МФР раз в неделю (+ запись)</li><li>Доступ в общую группу с полезными ссылками и чатом</li></ul>
+          <a href="#contacts" class="btn btn-wine">Хочу этот тариф</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= РАЗОВЫЕ ТРЕНИРОВКИ ======= -->
+<section id="single">
+  <div class="wrap">
+    <div class="card single-card">
+    <div class="head-row rv">
+      <div>
+        <h2>Тренировки со мной по онлайн-созвону</h2>
+        <p class="lead" style="color:var(--wine-deep)">Хочешь попробовать или заниматься без сопровождения? Бери одну тренировку или пакет.</p>
+      </div>
+      <div class="rev-nav"><button type="button" id="packPrev" aria-label="Предыдущий пакет">←</button><button type="button" id="packNext" aria-label="Следующий пакет">→</button></div>
+    </div>
+    <div class="reviews packs" id="packTrack">
+      <div class="pack rv">
+        <div class="count">1</div>
+        <div class="what">тренировка</div>
+        <div class="price">1 700 ₽</div>
+        <div class="per">чтобы познакомиться</div>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
+      </div>
+      <div class="pack rv">
+        <div class="count">5</div>
+        <div class="what">тренировок</div>
+        <div class="price">8 000 ₽</div>
+        <div class="per">1 600 ₽ за тренировку</div>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
+      </div>
+      <div class="pack rv">
+        <div class="count">10</div>
+        <div class="what">тренировок</div>
+        <div class="price">15 000 ₽</div>
+        <div class="per">1 500 ₽ за тренировку</div>
+        <a href="#contacts" class="btn btn-wine">Записаться</a>
+      </div>
+    </div>
+    <div class="includes rv">
+      <div>
+        <h3>Что входит в онлайн-тренировку</h3>
+        <div class="meta"><span>⏱ первая — 1,5–2 часа</span><span>⏱ обычная — 1–1,5 часа</span><span>🏠 дома или в зале</span></div>
+      </div>
+      <ul class="list two">
+        <li>Личный тренировочный план</li>
+        <li>Подробное объяснение техники онлайн</li>
+        <li>Постановка техники</li>
+        <li>Можно заниматься дома или в зале</li>
+        <li>Первая тренировка 1,5–2 часа — максимально подробно разбираем технику</li>
+        <li>Обычная тренировка 1–1,5 часа, когда технику уже знаем</li>
+        <li>Основы разминки и заминки</li>
+        <li>Индивидуальный расчёт КБЖУ для достижения целей</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КЕЙСЫ ======= -->
+<section id="cases">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Кейсы</h2></div>
+      <div class="rev-nav"><button type="button" id="casePrev" aria-label="Предыдущий кейс">←</button><button type="button" id="caseNext" aria-label="Следующий кейс">→</button></div>
+    </div>
+    <div class="reviews cases" id="casesTrack">
+      <figure class="rv"><img width="1262" height="572" src="case-16.jpg" alt="Результат ученицы до и после — спереди, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1230" height="730" src="case-15.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1280" height="1216" src="case-21.jpg" alt="Результат ученицы до и после — со спины, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1280" height="853" src="case-22.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1280" height="1280" src="case-23.jpg" alt="Результат ученицы до и после — сбоку, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1280" height="1280" src="case-24.jpg" alt="Результат ученицы до и после — плечи и шея, 2 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="720" src="case-18.jpg" alt="Результат ученицы до и после — со спины, 1 месяц" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="720" src="case-19.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv"><img width="1280" height="1280" src="case-20.jpg" alt="Результат ученицы до и после — сбоку, 1 месяц" loading="lazy"></figure>
+      <figure class="rv"><img width="819" height="1205" src="case-11.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="720" height="1015" src="case-12.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-7.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="966" height="1000" src="case-8.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-9.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-1.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-2.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1290" height="770" src="case-3.jpg" alt="Результат ученицы до и после" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-13.jpg" alt="Результат ученицы до и после — спереди, 3 месяца" loading="lazy"></figure>
+      <figure class="rv"><img width="1094" height="900" src="case-14.jpg" alt="Результат ученицы до и после — со спины, 3 месяца" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ОТЗЫВЫ ======= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="head-row rv"><div><h2>Отзывы</h2></div>
+      <div class="rev-nav"><button type="button" id="revPrev" aria-label="Предыдущий отзыв">←</button><button type="button" id="revNext" aria-label="Следующий отзыв">→</button></div>
+    </div>
+    <div class="reviews" id="reviewsTrack">
+      <figure class="rv"><img width="800" height="1336" src="review-1.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="1063" src="review-2.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="740" src="review-3.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="1858" src="review-4.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="471" src="review-7.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="218" src="review-5.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="354" src="review-6.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv"><img width="800" height="993" src="review-8.jpg" alt="Отзыв ученицы" loading="lazy"></figure>
+      <figure class="rv wide"><img width="550" height="186" src="yulia_testimonial_crop.png" alt="Отзыв ученицы: благодарность за поддержку и помощь" loading="lazy"></figure>
+      <figure class="rv wide"><img width="2172" height="724" src="review-9.png" alt="Отзыв ученицы" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КАК НАЧАТЬ ======= -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <div class="head-row rv">
+        <div>
+          <h2>Всего 3 шага, чтобы начать</h2>
+        </div>
+      </div>
+      <ol class="how">
+        <li class="rv"><h3>Напиши мне в Telegram</h3><p>Расскажи о себе и своей цели.</p></li>
+        <li class="rv"><h3>Выбери тариф</h3><p>Выбери тариф, или вместе обсудим, какой формат будет для тебя самым удобным.</p></li>
+        <li class="rv"><h3>Начинаем</h3><p>Оплачиваешь, получаешь персональный план, и мы начинаем строить тело мечты.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ======= КОНТАКТЫ ======= -->
+<section id="contacts">
+  <div class="wrap">
+    <div class="contact">
+      <div class="rv">
+        <h2>Жду тебя!</h2>
+        <p class="lead">Чтобы связаться со мной и начать работу, напиши мне в Telegram.</p>
+      </div>
+      <div class="socials rv">
+        <a class="soc" data-contact="telegram" href="#contacts" target="_blank" rel="noopener">
+          <span class="si tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.2L2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.8-1.3-1.5zM9.4 14.3l9-5.7c.4-.3.8-.1.5.2l-7.5 6.8-.3 3.2-1.7-4.5z"/></svg></span>
+          <span>Telegram<small data-handle="telegram">ник скоро</small></span>
+        </a>
+        <a class="soc" data-contact="instagram" href="#contacts" target="_blank" rel="noopener">
+          <span class="si ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <span>Instagram*<small data-handle="instagram">ник скоро</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="logo"><b>Юлия Костюкова</b><span>фитнес-тренер онлайн</span></a>
+    <span>© 2026 · Все права защищены</span>
+    <p class="note">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой на территории РФ.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="#contacts" class="btn btn-wine">Хочу на ведение!</a></div>
+
+<script>
+  /* ====== КОНТАКТЫ: впиши свои данные сюда ======
+     telegram  — ник без @          (пример: "yulia_fit")
+     whatsapp  — номер только цифрами (пример: "79991234567")
+     instagram — ник без @
+     vk        — адрес страницы после vk.com/ (пример: "id123" или "yulia_fit")   */
+  const TG_HELLO = "Юля, привет)\n\nМеня интересует: (выбери)\n1. онлайн-ведение\n2. онлайн тренировки \n3. нужна твоя помощь, чтобы определиться с тарифом 🙏🏼\n\nНапиши, пожалуйста \n(голосовыми нельзя ❌, эта информация всегда должна быть у меня под рукой в виде текста) \n\n👥 Твой возраст, рост, вес\n🎯 Твоя главная цель на ближайшие 4-6 месяцев? (например: похудеть, подтянуть тело, набрать мышечную массу)\n❌ Что сильнее всего мешает тебе ее достичь? (нехватка времени, непонимание как питаться, нет мотивации и т.д.) \n\nЭто поможет мне предложить тебе лучшее решение❤️\n\n*после этой короткой анкеты я пришлю более подробный список вопросов, чтобы узнать твое тело получше и составить план КБЖУ / тренировок";
+  const CONTACTS = {
+    telegram:  "yuliakossst",
+    whatsapp:  "79081844822",
+    instagram: "yuliakossst",
+    vk:        ""
+  };
+
+  const build = {
+    telegram:  v => ["https://t.me/" + v + "?text=" + encodeURIComponent(TG_HELLO), "@" + v],
+    whatsapp:  v => ["https://wa.me/" + v + "?text=" + encodeURIComponent("Привет, Юля! Хочу узнать про тренировки"),
+                     v.length === 11 ? "+" + v[0] + " " + v.slice(1,4) + " " + v.slice(4,7) + "-" + v.slice(7,9) + "-" + v.slice(9) : "+" + v],
+    instagram: v => ["https://instagram.com/" + v, "@" + v],
+    vk:        v => ["https://vk.com/" + v, "vk.com/" + v]
+  };
+  for (const key in CONTACTS) {
+    const v = (CONTACTS[key] || "").trim().replace(/^@/, "");
+    if (!v) continue;
+    const [href, label] = build[key](v);
+    document.querySelectorAll('[data-contact="' + key + '"]').forEach(a => a.href = href);
+    document.querySelectorAll('[data-handle="' + key + '"]').forEach(s => s.textContent = label);
+  }
+  /* незаполненные контакты скрываются */
+  document.querySelectorAll('[data-contact]').forEach(a => { if (a.getAttribute('href') === '#contacts') a.style.display = 'none'; });
+
+  /* листание отзывов */
+  [['reviewsTrack','revPrev','revNext'],['casesTrack','casePrev','caseNext'],['dipTrack','dipPrev','dipNext'],['tarTrack','tarPrev','tarNext'],['packTrack','packPrev','packNext']].forEach(function(ids){
+    const t=document.getElementById(ids[0]), pr=document.getElementById(ids[1]), nx=document.getElementById(ids[2]);
+    if(!t||!pr||!nx) return;
+    const step=()=>{const f=t.firstElementChild; const g=parseFloat(getComputedStyle(t).columnGap)||16; return f? f.getBoundingClientRect().width+g : 300};
+    const upd=()=>{pr.disabled=t.scrollLeft<=4; nx.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4; pr.parentElement.style.display=(t.scrollWidth<=t.clientWidth+4)?'none':''};
+    pr.addEventListener('click',()=>t.scrollBy({left:-step(),behavior:'smooth'}));
+    nx.addEventListener('click',()=>t.scrollBy({left:step(),behavior:'smooth'}));
+    t.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+  });
+
+  /* точный переход по пунктам меню: подправляем позицию после подгрузки картинок */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    const id=a.getAttribute('href'); if(id.length<2) return;
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(id); if(!t) return;
+      e.preventDefault();
+      document.querySelectorAll('img[loading="lazy"]').forEach(i=>i.loading='eager');
+      const go=(b)=>{const top=t.getBoundingClientRect().top+window.scrollY-(document.querySelector('.top')?.offsetHeight||90)-16; window.scrollTo({top,behavior:b});};
+      go('smooth'); setTimeout(()=>go('smooth'),700); setTimeout(()=>go('auto'),1400);
+      history.replaceState(null,'',id);
+    });
+  });
+
+  /* плавное появление блоков */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 }) : null;
+  document.querySelectorAll('.rv').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+</script>
+</body>
+</html>
